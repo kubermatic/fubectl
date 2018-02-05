@@ -1,10 +1,10 @@
 # Fubectl
 Because it's fancy-kubectl!
----
-### What do I need?
-* fzf
-* kubectl
-* jq
+
+## What do I need?
+* [fzf](https://github.com/junegunn/fzf)
+* [kubectl](https://github.com/kubernetes/kubernetes)
+* [jq](https://stedolan.github.io/jq/)
 
 ## What can I do?
 Command|Params|Description
