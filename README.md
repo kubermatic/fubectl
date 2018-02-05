@@ -21,3 +21,9 @@ ksearch | `grep-regex`| search for string in resources
 kcs ||Context list
 kcs ||Context set
 kdebug|| Start debugging Pod in Cluster
+
+## Extra!
+Do you wan't to have the current kubecontext in your prompt?:
+```bash
+export PS1="\[$(kube_ctx_name)\] $PS1"
+```
