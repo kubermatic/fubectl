@@ -65,6 +65,22 @@ kex() {
   eval kubectl exec -it -n "${arg_pair}" -c "${pod_choosen}" -- $1
 }
 
+# kfor (port-forward a container port to your local machine)
+kfor() {
+  if [ ! -n "$1" ]
+  then
+    echo "Provide a port you want to forward"
+    return 255
+  fi
+
+  arg_pair="$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')"
+  pods_out="$(echo $arg_pair | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)"
+  pod_choosen="$(echo $pods_out |  tr ' ' "\n" | _inline_fzf_nh)"
+  echo "kubectl port-forward -n ${arg_pair} $1"
+  eval kubectl port-forward -n "${arg_pair}" $1
+}
+
+
 # ksearch (search for string in resources)
 ksearch() {
   search_query="$1"
