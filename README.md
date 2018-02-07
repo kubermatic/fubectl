@@ -108,7 +108,7 @@ Opens a Kubernetes dashboard
 
 ## Installation
 
-You can directly download the [`fubeconfig.source`](https://rawgit.com/realfake/fubectl/master/fubectl.source)
+You can directly download the [`fubectl.source`](https://rawgit.com/realfake/fubectl/master/fubectl.source)
 and save it in some directory.
 
 Download:
@@ -118,7 +118,7 @@ curl -LO https://rawgit.com/realfake/fubectl/master/fubectl.source
 
 then add to your .bashrc/.zshrc file:
 ```sh
-[ -f <path-to>/fubeconfig.source ] && source <path-to>/fubeconfig.source
+[ -f <path-to>/fubectl.source ] && source <path-to>/fubectl.source
 ```
 
 ## Extra!
