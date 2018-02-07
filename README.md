@@ -69,7 +69,8 @@ Usage:
 Port-forward a local port to a pod
 
 Params:
-* `port` | `host-port:container-port`
+* `port` _host-port=container-port_
+* `host-port:container-port`
 
 Usage:
 ![kGif](./demo_src/kfor.gif)
@@ -95,8 +96,18 @@ Context set
 Usage:
 ![kGif](./demo_src/kcs.gif)
 ---
+### kcns
+Switch the default namespace
+
+Params:
+* ` ` _will fuzzy find_
+* `namespace` _directly set the namespace_
+
+Usage:
+![kGif](./demo_src/kcns.gif)
+---
 ### kdebug
-Start debugging Pod in Cluster
+Start a debugging Pod in a Cluster
 
 Usage:
 ![kGif](./demo_src/kdebug.gif)
@@ -112,12 +123,12 @@ You can directly download the [`fubectl.source`](https://rawgit.com/realfake/fub
 and save it in some directory.
 
 Download:
-```sh
+```bash
 curl -LO https://rawgit.com/realfake/fubectl/master/fubectl.source
 ```
 
 then add to your .bashrc/.zshrc file:
-```sh
+```bash
 [ -f <path-to>/fubectl.source ] && source <path-to>/fubectl.source
 ```
 
@@ -125,4 +136,9 @@ then add to your .bashrc/.zshrc file:
 Do you wan't to have the current kubecontext in your prompt?:
 ```bash
 export PS1="\[$(kube_ctx_name)\] $PS1"
+```
+
+for the current namespace (this is currently slow, because it calls kubectl every time):
+```bash
+export PS1="\[$(kube_ctx_namespace)\] $PS1"
 ```

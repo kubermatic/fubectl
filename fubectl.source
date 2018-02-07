@@ -5,6 +5,12 @@ function kube_ctx_name {
   echo "$(cat ${KUBECONFIG:-~/.kube/config}|grep current-context|sed 's/current-context: //g'|tr -d ' ')"
 }
 
+function kube_ctx_namespace {
+  default_ns="$(kubectl config view --minify|grep namespace: |sed 's/namespace: //g'|tr -d ' ')"
+  default_ns="${default_ns:-default}"
+  echo "$default_ns"
+}
+
 # Kubernetes alias section for more suffisticated commands see https://github.com/ahmetb/kubectl-aliases
 # like g for git but 233% as effective!
 alias k="kubectl"
@@ -102,5 +108,15 @@ kcs() {
   eval kubectl config set current-context "${context}"
 }
 
+# kcns (context set default namespace)
+kcns() {
+  if [ ! -n "$1" ]
+  then
+    ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
+    eval kubectl config set-context "$(kubectl config current-context)" --namespace="${ns}"
+  else
+    eval kubectl config set-context "$(kubectl config current-context)" --namespace="$1"
+  fi
+}
 # kdebug (start debugging in cluster)
 alias kdebug='kubectl run test --rm --restart=Never -it --image=ubuntu -- bash'
