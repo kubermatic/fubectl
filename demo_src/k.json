@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 5.937278,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.147029,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.916322,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000118,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      8.5e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.004837,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.047245,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m "
+    ],
+    [
+      6.6e-05,
+      "\u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000206,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000306,
+      "\u001b[?2004h"
+    ],
+    [
+      0.795966,
+      "k"
+    ],
+    [
+      0.317728,
+      "\bk "
+    ],
+    [
+      0.248094,
+      "g"
+    ],
+    [
+      0.119741,
+      "e"
+    ],
+    [
+      0.080239,
+      "t"
+    ],
+    [
+      0.167777,
+      " "
+    ],
+    [
+      0.192266,
+      "n"
+    ],
+    [
+      0.167851,
+      "o"
+    ],
+    [
+      0.095918,
+      "d"
+    ],
+    [
+      0.055936,
+      "e"
+    ],
+    [
+      0.168067,
+      "s"
+    ],
+    [
+      0.15122,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001872,
+      "\u001b]2;kubectl get nodes\u0007\u001b]1;k\u0007"
+    ],
+    [
+      0.142503,
+      "NAME       STATUS    ROLES     AGE       VERSION\r\nminikube   Ready     <none>    1h        "
+    ],
+    [
+      8.1e-05,
+      "v1.7.0\r\n"
+    ],
+    [
+      0.002779,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000209,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      8.9e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003638,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.026449,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000131,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.7e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.038651,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 8.049986,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.132893,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.474809,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      6.5e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003311,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.023057,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000179,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      4.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.530385,
+      "k"
+    ],
+    [
+      0.070924,
+      "\bkd"
+    ],
+    [
+      0.063836,
+      "e"
+    ],
+    [
+      0.095964,
+      "l"
+    ],
+    [
+      0.543978,
+      " "
+    ],
+    [
+      0.360126,
+      "p"
+    ],
+    [
+      0.087906,
+      "o"
+    ],
+    [
+      0.191483,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      8.9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001405,
+      "\u001b]2;kdel po\u0007"
+    ],
+    [
+      3.7e-05,
+      "\u001b]1;kdel\u0007"
+    ],
+    [
+      0.184289,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000466,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001606,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      4.3e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      1.9e-05,
+      "\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mdefault       test                          1/1       Running   0          51s\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   heapster-b587m                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influxdb-grafana-wl2vk        2/2       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manager-minikube   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   ku"
+    ],
+    [
+      2.8e-05,
+      "be-dns-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-kx7bz    1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-zk290                1/1       Running   0          1h\u001b[m\u001b[8A\r\u001b[2C"
+    ],
+    [
+      0.019988,
+      "\r\u001b[2C"
+    ],
+    [
+      1.632633,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mdefault       test                          1/1       Running   0          51s\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   heapster-b587m                1/1       Running   0          1h\u001b[m\u001b[3A\r\u001b[2C"
+    ],
+    [
+      0.583382,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mdefault       test                          1/1       Running   0          51s\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   heapster-b587m                1/1       Running   0          1h\u001b[m\u001b[3A\r\u001b[2C"
+    ],
+    [
+      0.247937,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.154353,
+      "pod \"test\" deleted\r\n"
+    ],
+    [
+      0.005525,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      9.5e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.1e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.0034,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.027182,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000125,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.8e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.569322,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

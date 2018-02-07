@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 6.854141,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.130843,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.50706,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      3.6e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003823,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024558,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m "
+    ],
+    [
+      3.5e-05,
+      "\u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000159,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000144,
+      "\u001b[?2004h"
+    ],
+    [
+      0.748999,
+      "k"
+    ],
+    [
+      0.230952,
+      "\bks"
+    ],
+    [
+      0.223769,
+      "e"
+    ],
+    [
+      0.151977,
+      "a"
+    ],
+    [
+      0.184047,
+      "r"
+    ],
+    [
+      0.200022,
+      "c"
+    ],
+    [
+      0.080088,
+      "h"
+    ],
+    [
+      0.103917,
+      " "
+    ],
+    [
+      0.439936,
+      "a"
+    ],
+    [
+      0.095917,
+      "p"
+    ],
+    [
+      0.11237,
+      "i"
+    ],
+    [
+      0.247052,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.7e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00134,
+      "\u001b]2;ksearch api\u0007\u001b]1;ksearch\u0007"
+    ],
+    [
+      0.313774,
+      "kubectl get -n default Secret\tdefault-token-001v4\r\nkubectl get -n default Service\tkubernetes\r\nkubectl get -n default ServiceAccount\tdefault\r\nkubectl get -n default Endpoints\tkubernetes\r\nkubectl get -n default Event\ttest.1510dc3cd8c2335c\r\nkubectl get -n default Event\ttest.1510dc3ce873a922\r\nkubectl get -n default Event\ttest.1510dc3cf57c1520\r\n"
+    ],
+    [
+      4.1e-05,
+      "kubectl get -n default Event\ttest.1510dc3cf77f76df\r\nkubectl get -n default Event\ttest.1510dc3cfbc48028\r\nkubectl get -n default Event\ttest.1510dc4171107341\r\nkubectl get -n default Event\ttest.1510dc4ca65e0bd5\r\nkubectl get -n default Event\ttest.1510dc4cb5f121d3\r\nkubectl get -n default Event\ttest.1510dc4cc2a88862\r\nkubectl get -n default Event\ttest.1510dc4cc4602451\r\nkubectl get -n default Event\ttest.1510dc4cc7963042\r\nkubectl get -n default Event\ttest.1510dc4dba8da886\r\nkubectl get -n default Event\ttest.1510dc4dbd671af6\r\nkubectl get -n default Event\ttest.1510dec8ad206f60\r\nkubectl get -n default Event\ttest.1510dec8b62e67a0\r\n"
+    ],
+    [
+      6.7e-05,
+      "kubectl get -n default Event\ttest.1510dec8c9220981\r\nkubectl get -n default Event\ttest.1510dec8cac4ecb6\r\nkubectl get -n default Event\ttest.1510dec8cfda4fb7\r\nkubectl get -n default Event\ttest.1510ded535175d6a\r\nkubectl get -n default StorageClass\tstandard\r\n"
+    ],
+    [
+      0.181317,
+      "kubectl get -n kube-public Secret\tdefault-token-j43wn\r\nkubectl get -n kube-public ServiceAccount\tdefault\r\nkubectl get -n kube-public StorageClass\tstandard\r\n"
+    ],
+    [
+      0.261496,
+      "kubectl get -n kube-system Deployment\tkube-dns\r\nkubectl get -n kube-system Secret\tdefault-token-pvx31\r\nkubectl get -n kube-system ConfigMap\textension-apiserver-authentication\r\nkubectl get -n kube-system ConfigMap\tkube-dns\r\nkubectl get -n kube-system Service\theapster\r\nkubectl get -n kube-system Service\tkube-dns\r\nkubectl get -n kube-system Service\tkubernetes-dashboard\r\nkubectl get -n kube-system Service\tmonitoring-grafana\r\nkubectl get -n kube-system Service\tmonitoring-influxdb\r\nkubectl get -n kube-system Service\tregistry\r\nkubectl get -n kube-system ServiceAccount\tdefault\r\nkubectl get -n kube-system Pod\theapster-b587m\r\n"
+    ],
+    [
+      3.8e-05,
+      "kubectl get -n kube-system Pod\tinfluxdb-grafana-wl2vk\r\nkubectl get -n kube-system Pod\tkube-addon-manager-minikube\r\nkubectl get -n kube-system Pod\tkube-dns-910330662-8pxxh\r\nkubectl get -n kube-system Pod\tkubernetes-dashboard-kx7bz\r\nkubectl get -n kube-system Pod\tregistry-zk290\r\nkubectl get -n kube-system Endpoints\theapster\r\nkubectl get -n kube-system Endpoints\tkube-controller-manager\r\nkubectl get -n kube-system Endpoints\tkube-dns\r\nkubectl get -n kube-system Endpoints\tkube-scheduler\r\nkubectl get -n kube-system Endpoints\tkubernetes-dashboard\r\nkubectl get -n kube-system Endpoints\tmonitoring-grafana\r\nkubectl get -n kube-system Endpoints\tmonitoring-influxdb\r\nkubectl get -n kube-system Endpoints\tregistry\r\nkubectl get -n kube-system ReplicaSet\tkube-dns-910330662\r\nkubectl get -n kube-system ReplicationController\theapster\r\nkubectl get -n kube-system ReplicationController\tinfluxdb-grafana\r\n"
+    ],
+    [
+      5.9e-05,
+      "kubectl get -n kube-system ReplicationController\tkubernetes-dashboard\r\nkubectl get -n kube-system ReplicationController\tregistry\r\nkubectl get -n kube-system StorageClass\tstandard\r\n"
+    ],
+    [
+      0.000491,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      8.5e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      8.7e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003283,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024373,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.00018,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.54178,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

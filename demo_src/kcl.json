@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 5.470214,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.131353,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.47423,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      4e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      0.000204,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003074,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.025146,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000252,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.7e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.19601,
+      "k"
+    ],
+    [
+      0.447027,
+      "\bkc"
+    ],
+    [
+      0.072112,
+      "l"
+    ],
+    [
+      0.21557,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.0013,
+      "\u001b]2;kubectl config get-contexts\u0007\u001b]1;kcl\u0007"
+    ],
+    [
+      0.087527,
+      "CURRENT   NAME                                                                          CLUSTER                                                                       AUTHINFO                                                                      "
+    ],
+    [
+      3.9e-05,
+      "NAMESPACE\r\n          gke_kubermatic-dev_us-central1-a_kubermatic-staging                           gke_kubermatic-dev_us-central1-a_kubermatic-staging                           gke_kubermatic-dev_us-central1-a_kubermatic-staging                           \r\n          gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   \r\n*         minikube                                                                      minikube                "
+    ],
+    [
+      5.8e-05,
+      "                                                      minikube                                                                      \r\n          docker-for-desktop"
+    ],
+    [
+      2.6e-05,
+      "                                                            docker-for-desktop-cluster                                                    docker-for-desktop                                                            \r\n          gke_kubermatic-dev_europe-west3-b_conrad-instana                              gke_kubermatic-dev_europe-west3-b_conrad-instana"
+    ],
+    [
+      2.1e-05,
+      "                              gke_kubermatic-dev_europe-west3-b_conrad-instana                              \r\n          gke_kubermatic-dev_europe-west3-c_kubermatic-dev                "
+    ],
+    [
+      6e-05,
+      "              gke_kubermatic-dev_europe-west3-c_kubermatic-dev                              gke_kubermatic-dev_europe-west3-c_kubermatic-dev                              \r\n "
+    ],
+    [
+      2.7e-05,
+      "         gke_kubermatic-dev_us-central1-a_kubermatic-dev                               gke_kubermatic-dev_us-central1-a_kubermatic-dev                               gke_kubermatic-dev_us-central1-a_kubermatic-dev                               \r\n"
+    ],
+    [
+      0.002382,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000106,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.5e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.002932,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.028936,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      9.6e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.5e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.740384,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

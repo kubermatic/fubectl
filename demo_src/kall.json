@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 4.540243,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.140848,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.778013,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000126,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.0034,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024773,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000286,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.9e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.732919,
+      "k"
+    ],
+    [
+      0.078798,
+      "\bka"
+    ],
+    [
+      0.14373,
+      "l"
+    ],
+    [
+      0.151966,
+      "l"
+    ],
+    [
+      0.287669,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.8e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001416,
+      "\u001b]2;kubectl get pods --all-namespaces\u0007\u001b]1;kall\u0007"
+    ],
+    [
+      0.186391,
+      "NAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\r\n"
+    ],
+    [
+      7.9e-05,
+      "kube-system   heapster-b587m                1/1       Running   0          1h\r\nkube-system   influxdb-grafana-wl2vk        2/2       Running   0          1h\r\nkube-system   kube-addon-manager-minikube   1/1       Running   0"
+    ],
+    [
+      2.9e-05,
+      "          1h\r\nkube-system   kube-dns-910330662-8pxxh      3/3       Running   0          1h\r\nkube-system   kubernetes-dashboard-kx7bz    1/1       Running   0"
+    ],
+    [
+      2.8e-05,
+      "          1h\r\nkube-system   registry-zk290                1/1       "
+    ],
+    [
+      2.1e-05,
+      "Running   0          1h\r\n"
+    ],
+    [
+      0.003159,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000183,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003511,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.028099,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000104,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.9e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.928863,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

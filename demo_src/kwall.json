@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 13.693944,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.149435,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.583175,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      5.9e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003779,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024243,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m "
+    ],
+    [
+      5.5e-05,
+      "\u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000117,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000104,
+      "\u001b[?2004h"
+    ],
+    [
+      0.529204,
+      "k"
+    ],
+    [
+      0.119166,
+      "\bkw"
+    ],
+    [
+      0.095879,
+      "a"
+    ],
+    [
+      0.096002,
+      "l"
+    ],
+    [
+      0.144145,
+      "l"
+    ],
+    [
+      0.271043,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      7.2e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001159,
+      "\u001b]2;watch kubectl get pods --all-namespaces\u0007\u001b]1;kwall\u0007"
+    ],
+    [
+      0.010646,
+      "\u001b[?1049h\u001b[1;25r\u001b(B\u001b[m\u001b[4l\u001b[?7h"
+    ],
+    [
+      0.173049,
+      "\u001b[H\u001b[2JEvery 2.0s: kubectl get pods --all-namespaces\u001b[1;58Hrealfake-mbp: Wed Feb  7 00:00:24 2018\u001b[3;1HNAMESPACE     NAME\u001b[3;45HREADY     STATUS    RESTARTS   AGE\r\u001b[4dkube-system   heapster-b587m\u001b[4;45H1/1\u001b[55GRunning   0\u001b[4;76H1h\r\u001b[5dkube-system   influxdb-grafana-wl2vk\u001b[5;45H2/2\u001b[55GRunning   0\u001b[5;76H1h\r\u001b[6dkube-system   kube-addon-manager-minikube   1/1\u001b[55GRunning   0\u001b[6;76H1h\r\u001b[7dkube-system   kube-dns-910330662-8pxxh\u001b[45G3/3\u001b[55GRunning   0\u001b[7;76H1h\r\u001b[8dkube-system   kubernetes-dashboard-kx7bz    1/1\u001b[55GRunning   0\u001b[8;76H1h\r\u001b[9dkube-system   registry-zk290\u001b[9;45H1/1\u001b[55GRunning   0\u001b[9;76H1h\u001b[25;95H"
+    ],
+    [
+      2.167758,
+      "\u001b[1;90H6\u001b[25;95H"
+    ],
+    [
+      2.185523,
+      "\u001b[1;90H8\u001b[3;61H\u001b[14X\u001b[3;75HRESTARTS   AGE\r\u001b[4ddefault       test          \u001b[4;45H0\u001b[4;55HContainerCreating   0  \u001b[4;86H2s\u001b[5;15Hheapster-b587m        \u001b[5;45H1/1\u001b[5;62H    \u001b[5;75H0  \u001b[5;86H1h\u001b[6;15Hinfluxdb-grafana-wl2vk        2/2\u001b[6;62H    \u001b[6;75H0  \u001b[6;86H1h\u001b[7;20Haddon-manager-minikube   1/1\u001b[7;62H    \u001b[7;75H0  \u001b[7;86H1h\u001b[8;19H-dns-910330662-8pxxh      3/3\u001b[8;62H    \u001b[8;75H0  \u001b[8;86H1h\u001b[9;15Hkubernetes-dashboard-kx7bz\u001b[9;62H    \u001b[9;75H0  \u001b[9;86H1h\r\u001b[10dkube-system   registry-zk290\u001b[10;45H1/1\u001b[55GRunning\u001b[10;75H0\u001b[10;86H1h\u001b[25;95H"
+    ],
+    [
+      2.172942,
+      "\u001b[1;89H31\u001b[3;61H\u001b[10P\u001b[4;45H1\u001b[4;55HRunning   0          4s\u001b[K\u001b[5;62H\u001b[10P\u001b[6d\u001b[10P\u001b[7d\u001b[10P\u001b[8d\u001b[10P\u001b[9d\u001b[10P\u001b[10d\u001b[10P\u001b[25;95H"
+    ],
+    [
+      2.17141,
+      "\u001b[1;90H3\u001b[4;76H6\u001b[25;95H"
+    ],
+    [
+      1.085423,
+      "\u001b[25;1H\u001b[?1049l\r\u001b[?1l\u001b>"
+    ],
+    [
+      0.000642,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000136,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.9e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003211,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.02454,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000192,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.635291,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

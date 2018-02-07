@@ -1,0 +1,334 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 8.41686,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.119089,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.423794,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      3.6e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.002708,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.025645,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000123,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      4.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.502461,
+      "k"
+    ],
+    [
+      0.070986,
+      "\bkc"
+    ],
+    [
+      0.071805,
+      "s"
+    ],
+    [
+      0.087396,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      8.7e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001152,
+      "\u001b]2;kcs\u0007\u001b]1;kcs\u0007"
+    ],
+    [
+      0.10217,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000559,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.002181,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      2.9e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      3.5e-05,
+      "\u001b[;38;5;109mCURRENT   NAME                                                                          CL..\u001b[m\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C\u001b[;38;5;109mCURRENT   NAME                                                                          CL..\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m*         minikube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          docker-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_europe-west3-b_conrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_europe-west3-c_kubermatic-dev       "
+    ],
+    [
+      0.000121,
+      "                       gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_us-central1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_us-central1-a_kubermatic-staging                           gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[8A\r\u001b[2C"
+    ],
+    [
+      0.02209,
+      "\r\u001b[2C"
+    ],
+    [
+      1.592893,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1md\u001b[m\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000583,
+      "\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236mocker-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_us-central1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_europe-west3-b_conrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_europe-west3-c_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_us-central1-a_kubermatic-staging                           gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;4"
+    ],
+    [
+      8.9e-05,
+      "8;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[8A\r\u001b[3C"
+    ],
+    [
+      0.094605,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdo\u001b[m\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.00037,
+      "\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236mcker-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-b_conrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-c_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;m                                                    "
+    ],
+    [
+      3.1e-05,
+      "                                           \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[7A\r\u001b[4C"
+    ],
+    [
+      0.079615,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdoc\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000286,
+      "\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mc\u001b[m\u001b[;1;38;5;254;48;5;236mker-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-b_\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;monrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b["
+    ],
+    [
+      2.8e-05,
+      "m\u001b[;m_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[5A\r\u001b[5C"
+    ],
+    [
+      0.119582,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdock\u001b[m\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\r\u001b[6C"
+    ],
+    [
+      0.000367,
+      "\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mc\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mk\u001b[m\u001b[;1;38;5;254;48;5;236mer-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m..ubermati"
+    ],
+    [
+      3.9e-05,
+      "c-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-b_\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;monrad-instana                              gke_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mubermatic-..\u001b[m\u001b[5A\r\u001b[6C"
+    ],
+    [
+      0.039567,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdocke\u001b[m\r\u001b[8C\u001b[;m                                                                                       \r\u001b[8C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\r\u001b[7C"
+    ],
+    [
+      0.000379,
+      "\r\u001b[8C\u001b[;m                                                                                       \r\u001b[8C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mc\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mk\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236mr-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mrmatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mrm"
+    ],
+    [
+      4.1e-05,
+      "atic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m.._kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-b_\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;monrad-instana                              g\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m_kubermati..\u001b[m\u001b[5A\r\u001b[7C"
+    ],
+    [
+      0.16766,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdocker\u001b[m\r\u001b[9C\u001b[;m                                                                                      \r\u001b[9C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\r\u001b[8C"
+    ],
+    [
+      0.00044,
+      "\r\u001b[9C\u001b[;m                                                                                      \r\u001b[9C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mc\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mk\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mmatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-pro\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-\u001b"
+    ],
+    [
+      3.7e-05,
+      "[m\u001b[;38;5;108mc\u001b[m\u001b[;m_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mmatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m..matic-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mev_eur\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mpe-west3-b_\u001b[m\u001b[;38;5;108mc\u001b[m\u001b[;monrad-instana                              gke_\u001b[m\u001b[;38;5;108mk\u001b[m\u001b[;mub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mmatic-dev_..\u001b[m\u001b[5A\r\u001b[8C"
+    ],
+    [
+      0.343097,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdocker\u001b[m\r\u001b[9C\u001b[;m                                                                                      \r\u001b[9C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.100714,
+      "Property \"current-context\" set.\r\n"
+    ],
+    [
+      0.002813,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      8.1e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.00335,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.02665,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[40C\u001b[01;30m[\u001b[01;31mdocker-for-desktop-cluster\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000103,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.986922,
+      "k"
+    ],
+    [
+      0.119941,
+      "\bkc"
+    ],
+    [
+      0.063795,
+      "s"
+    ],
+    [
+      0.111196,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.2e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000669,
+      "\u001b]2;kcs\u0007\u001b]1;kcs\u0007"
+    ],
+    [
+      0.097499,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000401,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001623,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      3.2e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      3.2e-05,
+      "\u001b[;38;5;109mCURRENT   NAME                                                                          CL..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          gke_kubermatic-dev_europe-west3-c_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_us-central1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_us-central1-a_kubermatic-staging                           gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          minikube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          docker-for-desktop                                                            do..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber"
+    ],
+    [
+      0.000122,
+      "matic-dev_europe-west3-b_conrad-instana                              gk..\u001b[m\u001b[7A\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C\u001b[;38;5;109mCURRENT   NAME                                                                          CL..\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\r\u001b[2C"
+    ],
+    [
+      0.019813,
+      "\r\u001b[2C"
+    ],
+    [
+      0.408554,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mm\u001b[m\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000309,
+      "\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236mm\u001b[m\u001b[;1;38;5;254;48;5;236minikube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;master   gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-dev_us-central1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-dev_europe-west3-c_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-dev_europe-west3-b_conrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;4"
+    ],
+    [
+      2.9e-05,
+      "8;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-dev_us-central1-a_kubermatic-staging                           gk..\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[8A\r\u001b[3C"
+    ],
+    [
+      0.087508,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mmi\u001b[m\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000345,
+      "\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236mm\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236mnikube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_us-central1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_europe-west3-c_kubermatic-dev                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_europe-west3-b_conrad-instana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b"
+    ],
+    [
+      3.1e-05,
+      "[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_us-central1-a_kubermatic-staging                           gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-prod_europe-west3-c_kubermatic-cloud-europe-west3-c-1-master   gk..\u001b[m\u001b[7A\r\u001b[4C"
+    ],
+    [
+      0.135745,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mmin\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/7\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000363,
+      "\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236mm\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236mikube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-dev_europe-west3-b_conrad-\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mstana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kubermatic-dev_us-central1-a_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;matic-stag\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mg                           gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_us-ce\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mtral"
+    ],
+    [
+      3.5e-05,
+      "1-a_kubermatic-dev                               gk..\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[7A\r\u001b[5C"
+    ],
+    [
+      0.167672,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mmini\u001b[m\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\r\u001b[6C"
+    ],
+    [
+      0.000397,
+      "\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m          \u001b[m\u001b[;1;38;5;151;48;5;236mm\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236mkube                                                                      mi..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_europe-west3-b_co\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mrad-\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mnstana                              gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_us-ce\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mtral1-a_kubermat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev                               gk..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m          "
+    ],
+    [
+      3.3e-05,
+      "gke_kuber\u001b[m\u001b[;38;5;108mm\u001b[m\u001b[;mat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-dev_us-ce\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mtral1-a_kubermat\u001b[m\u001b[;38;5;108mi\u001b[m\u001b[;mc-staging                           gk..\u001b[m\u001b[5A\r\u001b[6C"
+    ],
+    [
+      0.278874,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mmini\u001b[m\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m4/7\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.094664,
+      "Property \"current-context\" set.\r\n"
+    ],
+    [
+      0.003286,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      9.2e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      5.9e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003658,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.023255,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000115,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.7e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.763095,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

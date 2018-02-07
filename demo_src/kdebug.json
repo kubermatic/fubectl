@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 12.79653,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.139826,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.468973,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.00011,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003599,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.023373,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m "
+    ],
+    [
+      4.2e-05,
+      "\u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000303,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.042834,
+      "\u001b[7m# Spawn a debugging container in the cluster\u001b[27m"
+    ],
+    [
+      1.435993,
+      "\u001b[44D\u001b[27m#\u001b[27m \u001b[27mS\u001b[27mp\u001b[27ma\u001b[27mw\u001b[27mn\u001b[27m \u001b[27ma\u001b[27m \u001b[27md\u001b[27me\u001b[27mb\u001b[27mu\u001b[27mg\u001b[27mg\u001b[27mi\u001b[27mn\u001b[27mg\u001b[27m \u001b[27mc\u001b[27mo\u001b[27mn\u001b[27mt\u001b[27ma\u001b[27mi\u001b[27mn\u001b[27me\u001b[27mr\u001b[27m \u001b[27mi\u001b[27mn\u001b[27m \u001b[27mt\u001b[27mh\u001b[27me\u001b[27m \u001b[27mc\u001b[27ml\u001b[27mu\u001b[27ms\u001b[27mt\u001b[27me\u001b[27mr"
+    ],
+    [
+      4.4e-05,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001015,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000116,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.7e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003135,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024873,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000115,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.5e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.259355,
+      "k"
+    ],
+    [
+      0.327373,
+      "\bkd"
+    ],
+    [
+      0.088278,
+      "e"
+    ],
+    [
+      0.263765,
+      "b"
+    ],
+    [
+      0.145425,
+      "u"
+    ],
+    [
+      0.166593,
+      "g"
+    ],
+    [
+      0.135311,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000927,
+      "\u001b]2;kubectl run test --rm --restart=Never -it --image=ubuntu -- bash\u0007\u001b]1;kdebug\u0007"
+    ],
+    [
+      0.825437,
+      "If you don't see a command prompt, try pressing enter.\n"
+    ],
+    [
+      1.487808,
+      "\r\u001b[K\u001b]0;root@test: /\u0007root@test:/# \r\n\u001b]0;root@test: /\u0007root@test:/# "
+    ],
+    [
+      0.831918,
+      "l"
+    ],
+    [
+      0.072276,
+      "s"
+    ],
+    [
+      0.151445,
+      "\r\n"
+    ],
+    [
+      0.00249,
+      "\u001b[0m\u001b[01;34mbin\u001b[0m   \u001b[01;34mdev\u001b[0m  \u001b[01;34mhome\u001b[0m  \u001b[01;34mlib64\u001b[0m  \u001b[01;34mmnt\u001b[0m  \u001b[01;34mproc\u001b[0m  \u001b[01;34mrun\u001b[0m   \u001b[01;34msrv\u001b[0m  \u001b[30;42mtmp\u001b[0m  \u001b[01;34mvar\u001b[0m\r\n\u001b[01;34mboot\u001b[0m  \u001b[01;34metc\u001b[0m  \u001b[01;34mlib\u001b[0m   \u001b[01;34mmedia\u001b[0m  \u001b[01;34mopt\u001b[0m  \u001b[01;34mroot\u001b[0m  \u001b[01;34msbin\u001b[0m  \u001b[01;34msys\u001b[0m  \u001b[01;34musr\u001b[0m\r\n\u001b]0;root@test: /\u0007root@test:/# "
+    ],
+    [
+      1.598554,
+      "exit\r\n"
+    ],
+    [
+      0.899579,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000156,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.5e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003158,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.024904,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m "
+    ],
+    [
+      3.3e-05,
+      "\u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000132,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.3e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.325188,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

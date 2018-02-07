@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 8.318345,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.122529,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.520965,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      3.2e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      2.1e-05,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.004033,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.026132,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      3.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      9.8e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.91741,
+      "k"
+    ],
+    [
+      0.055253,
+      "\bkd"
+    ],
+    [
+      0.087808,
+      "e"
+    ],
+    [
+      0.175979,
+      "s"
+    ],
+    [
+      0.192012,
+      " "
+    ],
+    [
+      0.160301,
+      "p"
+    ],
+    [
+      0.120019,
+      "o"
+    ],
+    [
+      0.239247,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001332,
+      "\u001b]2;kdes po\u0007\u001b]1;kdes\u0007"
+    ],
+    [
+      0.187883,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000445,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.002748,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      3.3e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      3.7e-05,
+      "\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mdefault       test                          1/1       Running   0          24s\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   heapster-b587m                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influxdb-grafana-wl2vk        2/2       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manager-minikube   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   ku"
+    ],
+    [
+      3.5e-05,
+      "be-dns-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-kx7bz    1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-zk290                1/1       Running   0          1h\u001b[m\u001b[8A\r\u001b[2C"
+    ],
+    [
+      0.019939,
+      "\r\u001b[2C"
+    ],
+    [
+      1.42844,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1md\u001b[m\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000226,
+      "\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236mns-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[;m \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mashboard-kx7bz    1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mefault       test                          1/1       Running   0          24s\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influx\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mb-grafana-wl2vk        2/2       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-a\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mdon-manager-minikube   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[8A\r\u001b[4C\u001b[;m         "
+    ],
+    [
+      5.9e-05,
+      "                                                                                  \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.087294,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdn\u001b[m\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000268,
+      "\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236ms-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-ad\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mo\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m-manager-minikube   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influx\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mb-grafa\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;ma-wl2vk        2/2       Running   0          1h\u001b[m\u001b[;m \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mashboard-kx7bz    1/1       Ru\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mefault       test                          1/1       Ru\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mning   0          24s\u001b[m\u001b[6A\r\u001b[5C\u001b[;m                                                                               "
+    ],
+    [
+      3.8e-05,
+      "           \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.087528,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdns\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000286,
+      "\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m2/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236ms\u001b[m\u001b[;1;38;5;254;48;5;236m-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mefault       test                          1/1       Runni\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mg   0          24\u001b[m\u001b[;38;5;108ms\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[6A\r\u001b[5C"
+    ],
+    [
+      0.831107,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdns\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m2/7\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.16475,
+      "Name:           kube-dns-910330662-8pxxh\r\nNamespace:      kube-system\r\nNode:           minikube/192.168.99.100\r\nStart Time:     Tue, 06 Feb 2018 22:16:39 +0100\r\nLabels:         k8s-app=kube-dns\r\n                pod-template-hash=910330662\r\nAnnotations:    kubernetes.io/created-by={\"kind\":\"SerializedReference\",\"apiVersion\":\"v1\",\"reference\":{\"kind\":\"ReplicaSet\",\"namespace\":\"kube-system\",\"name\":\"kube-dns-910330662\",\"uid\":\"0566cb0d-0b83-11e8-b3cf-0800276e6...\r\n                scheduler.alpha.kubernetes.io/critical-pod=\r\nStatus:         Running\r\nIP:             172.17.0.5\r\nCreated By:     ReplicaSet/kube-dns-910330662\r\nControlled By:  ReplicaSet/kube-dns-910330662\r\nContainers:\r\n  kubedns:\r\n    Container ID:  docker://81441936d5ee4f49f87d58fa650e706fd5b67b7ba768de662b8a38c271428746\r\n    Image:         gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.4\r\n    Image ID:      docker-pullable://gcr.io/google_containers/k8s-dns-kube-dns-amd64@sha256:40790881bbe9ef4ae4ff7fe8b892498eecb7fe6dcc22661402f271e03f7de344\r\n   "
+    ],
+    [
+      4e-05,
+      " Ports:         10053/UDP, 10053/TCP, 10055/TCP\r\n    Args:\r\n      --domain=cluster.local.\r\n      --dns-port=10053\r\n      --config-map=kube-dns\r\n      --v=2\r\n    State:          Running\r\n      Started:      Tue, 06 Feb 2018 22:18:14 +0100\r\n    Ready:          True\r\n    Restart Count:  0\r\n    Limits:\r\n      memory:  170Mi\r\n    Requests:\r\n      cpu:      100m\r\n      memory:   70Mi\r\n    Liveness:   http-get http://:10054/healthcheck/kubedns delay=60s timeout=5s period=10s #success=1 #failure=5\r\n    Readiness:  http-get http://:8081/readiness delay=3s timeout=5s period=10s #success=1 #failure=3\r\n    Environment:\r\n      PROMETHEUS_PORT:  10055\r\n    Mounts:\r\n      /kube-dns-config from kube-dns-config (rw)\r\n      /var/run/secrets/kubernetes.io/serviceaccount from default-token-pvx31 (ro)\r\n  dnsmasq:\r\n    Container ID:  docker://fbe5c1a2b6413d35d7c483cd43e4bb0b7b246efe83de1d5c1f9b7db593a25c5e\r\n    Image:         gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4\r\n    Image ID:      docker-pullable://gcr.io/g"
+    ],
+    [
+      7.2e-05,
+      "oogle_containers/k8s-dns-dnsmasq-nanny-amd64@sha256:aeeb994acbc505eabc7415187cd9edb38cbb5364dc1c2fc748154576464b3dc2\r\n    Ports:         53/UDP, 53/TCP\r\n    Args:\r\n      -v=2\r\n      -logtostderr\r\n      -configDir=/etc/k8s/dns/dnsmasq-nanny\r\n      -restartDnsmasq=true\r\n      --\r\n      -k\r\n      --cache-size=1000\r\n      --log-facility=-\r\n      --server=/cluster.local/127.0.0.1#10053\r\n      --server=/in-addr.arpa/127.0.0.1#10053\r\n      --server=/ip6.arpa/127.0.0.1#10053\r\n    State:          Running\r\n      Started:      Tue, 06 Feb 2018 22:17:28 +0100\r\n    Ready:          True\r\n    Restart Count:  0\r\n    Requests:\r\n      cpu:        150m\r\n      memory:     20Mi\r\n    Liveness:     http-get http://:10054/healthcheck/dnsmasq delay=60s timeout=5s period=10s #success=1 #failure=5\r\n    Environment:  <none>\r\n    Mounts:\r\n      /etc/k8s/dns/dnsmasq-nanny from kube-dns-config (rw)\r\n      /var/run/secrets/kubernetes.io/serviceaccount from default-token-pvx31 (ro)\r\n  sidecar:\r\n    Container ID:  docker://3d6306ea311a990486f"
+    ],
+    [
+      0.000263,
+      "177affeebbd44b60ae6a45674e92d2b21dd5edbdbf44b\r\n    Image:         gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.4\r\n    Image ID:      docker-pullable://gcr.io/google_containers/k8s-dns-sidecar-amd64@sha256:97074c951046e37d3cbb98b82ae85ed15704a290cce66a8314e7f846404edde9\r\n    Port:          10054/TCP\r\n    Args:\r\n      --v=2\r\n      --logtostderr\r\n      --probe=kubedns,127.0.0.1:10053,kubernetes.default.svc.cluster.local.,5,A\r\n      --probe=dnsmasq,127.0.0.1:53,kubernetes.default.svc.cluster.local.,5,A\r\n    State:          Running\r\n      Started:      Tue, 06 Feb 2018 22:18:09 +0100\r\n    Ready:          True\r\n    Restart Count:  0\r\n    Requests:\r\n      cpu:        10m\r\n      memory:     20Mi\r\n    Liveness:     http-get http://:10054/metrics delay=60s timeout=5s period=10s #success=1 #failure=5\r\n    Environment:  <none>\r\n    Mounts:\r\n      /var/run/secrets/kubernetes.io/serviceaccount from default-token-pvx31 (ro)\r\nConditions:\r\n  Type           Status\r\n  Initialized    True \r\n  Ready          True \r\n  PodSc"
+    ],
+    [
+      4.7e-05,
+      "heduled   True \r\nVolumes:\r\n  kube-dns-config:\r\n    Type:      ConfigMap (a volume populated by a ConfigMap)\r\n    Name:      kube-dns\r\n    Optional:  true\r\n  default-token-pvx31:\r\n    Type:        Secret (a volume populated by a Secret)\r\n    SecretName:  default-token-pvx31\r\n    Optional:    false\r\nQoS Class:       Burstable\r\nNode-Selectors:  <none>\r\nTolerations:     CriticalAddonsOnly\r\nEvents:          <none>\r\n"
+    ],
+    [
+      0.003217,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000122,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      0.000107,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.00323,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.023996,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000101,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      8.3e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.811938,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

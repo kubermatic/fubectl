@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 6.788535,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.132045,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      1.513462,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      3.4e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003778,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.02397,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000178,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.893398,
+      "k"
+    ],
+    [
+      0.06329,
+      "\bkl"
+    ],
+    [
+      0.207936,
+      "o"
+    ],
+    [
+      0.103745,
+      "g"
+    ],
+    [
+      0.167494,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001258,
+      "\u001b]2;klog\u0007\u001b]1;klog\u0007"
+    ],
+    [
+      0.169739,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000401,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001607,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      4.1e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/6\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      3.9e-05,
+      "\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/6\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   heapster-b587m                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influxdb-grafana-wl2vk        2/2       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manager-minikube   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-dns-910330662-8pxxh      3/3       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-kx7bz    1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-zk290                1/1       Running   0          1h\u001b[m\u001b[6A\r\u001b[2C\u001b[;m   "
+    ],
+    [
+      0.000139,
+      "                                                                                          \r\u001b[2C\u001b[;38;5;109mNAMESPACE     NAME                          READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[2C"
+    ],
+    [
+      0.019533,
+      "\r\u001b[2C"
+    ],
+    [
+      1.288424,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mr\u001b[m\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/6\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.001138,
+      "\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/6\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   heapster-b587m                1/1       \u001b[m\u001b[;1;38;5;151;48;5;236mR\u001b[m\u001b[;1;38;5;254;48;5;236munning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influxdb-grafana-wl2vk        2/2       \u001b[m\u001b[;38;5;108mR\u001b[m\u001b[;munning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manager-minikube   1/1       \u001b[m\u001b[;38;5;108mR\u001b[m\u001b[;munning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-dns-910330662-8pxxh      3/3       \u001b[m\u001b[;38;5;108mR\u001b[m\u001b[;munning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-kx7bz    1/1       \u001b[m\u001b[;38;5;108mR\u001b[m\u001b[;munning   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   \u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;megistry-zk290    "
+    ],
+    [
+      3.8e-05,
+      "            1/1       Running   0          1h\u001b[m\u001b[7A\r\u001b[3C"
+    ],
+    [
+      0.046105,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mre\u001b[m\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m6/6\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000198,
+      "\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   \u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236mgistry-zk290                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mn\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mtes-dashboard-kx7bz    1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manage\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m-minikub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m   1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[7A\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;"
+    ],
+    [
+      8.1e-05,
+      "38;5;110m < \u001b[m\u001b[;38;5;144m3/6\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.175733,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mreg\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/6\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000239,
+      "\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/6\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   \u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mg\u001b[m\u001b[;1;38;5;254;48;5;236mistry-zk290                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manage\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m-minikub\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m   1/1       Runnin\u001b[m\u001b[;38;5;108mg\u001b[m\u001b[;m   0          1h\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mnet\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;ms-dashboard-kx7bz    1/1       Runnin\u001b[m\u001b[;38;5;108mg\u001b[m\u001b[;m   0          1h\u001b[m\u001b[4A\r\u001b[5C"
+    ],
+    [
+      0.111787,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mregi\u001b[m\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/6\u001b[m\r\u001b[6C"
+    ],
+    [
+      0.0001,
+      "\r\u001b[7C\u001b[;m                                                                                        \r\u001b[7C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/6\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   \u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mg\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236mstry-zk290                1/1       Running   0          1h\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[4A\r\u001b[6C"
+    ],
+    [
+      0.104185,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mregis\u001b[m\r\u001b[8C\u001b[;m                                                                                       \r\u001b[8C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/6\u001b[m\r\u001b[7C"
+    ],
+    [
+      0.000152,
+      "\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   \u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mg\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mi\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236ms\u001b[m\u001b[;1;38;5;254;48;5;236mtry-zk290                1/1       Running   0          1h\u001b[m\u001b[2A\r\u001b[8C\u001b[;m                                                                                       \r\u001b[8C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/6\u001b[m\r\u001b[7C"
+    ],
+    [
+      0.399223,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mregis\u001b[m\r\u001b[8C\u001b[;m                                                                                       \r\u001b[8C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/6\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.311186,
+      "time=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_PORT\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_PORT_80_TCP\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_PORT_80_TCP_ADDR\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_PORT_80_TCP_PORT\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_PORT_80_TCP_PROTO\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_SERVICE_HOST\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"Ignoring unrecognized environment variable REGISTRY_SERVICE_PORT\" \r\ntime=\"2018-02-06T21:17:35Z\" level=warning msg=\"No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, f"
+    ],
+    [
+      3.1e-05,
+      "ill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable.\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\ntime=\"2018-02-06T21:17:35Z\" level=info msg=\"redis not configured\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\ntime=\"2018-02-06T21:17:35Z\" level=info msg=\"Starting upload purge in 49m0s\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\ntime=\"2018-02-06T21:17:35Z\" level=info msg=\"using inmemory blob descriptor cache\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\ntime=\"2018-02-06T21:17:35Z\" level=info msg=\"listening on [::]:5000\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\ntime=\"2018-02-06T22:06:35Z\" level=info msg=\"PurgeUploads starting: olderThan=2018-01-30 22:06:35.931529288 +0000 UTC, actuallyDelete=true\" \r\ntime=\"2018-02-06T22:06:35Z\" level=info msg=\"Purge uploads finished"
+    ],
+    [
+      9.9e-05,
+      ".  Num deleted=0, num errors=1\" \r\ntime=\"2018-02-06T22:06:35Z\" level=info msg=\"Starting upload purge in 24h0m0s\" go.version=go1.7.3 instance.id=5c32c8f3-5e04-46ff-9421-94da7ed6d34d version=v2.6.1 \r\n"
+    ],
+    [
+      0.003394,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000144,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      0.000109,
+      "\u001b]1;~\u0007"
+    ],
+    [
+      0.003735,
+      "\u001b]7;file://realfake-mbp/Users/realfake\u0007"
+    ],
+    [
+      0.026182,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~ $\u001b[00m \u001b[K\u001b[58C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[68D"
+    ],
+    [
+      0.000124,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      7.7e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.975023,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

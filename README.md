@@ -7,21 +7,119 @@ Because it's fancy-kubectl!
 * [jq](https://stedolan.github.io/jq/)
 
 ## What can I do?
-Command|Params|Description
----|---|---
-k | `*` | Like g for git but 133% more effective!
-kall||Get all pods
-kwall||Watch all pods
-kp ||Open kubernetes dashboard
-kdes | `kind` | Describe resource
-kdel | `kind` | Delete resource
-klog | \[`lines` `extra-flag`\] |Fetch log from a container
-kex |`*`| execute command in container
-kfor | `port` | port-forward a local port to a pod
-ksearch | `grep-regex`| search for string in resources
-kcs ||Context list
-kcs ||Context set
-kdebug|| Start debugging Pod in Cluster
+
+### k
+Like g for git but 133% more effective!
+
+Params:
+* `*`
+
+Usage:
+![kGif](./demo_src/k.gif)
+---
+### kall
+Get all pods
+
+Usage:
+![kGif](./demo_src/kall.gif)
+---
+### kwall
+Watch all pods
+
+Usage:
+![kGif](./demo_src/kwall.gif)
+---
+### kdes
+Describe a resource
+
+Params:
+* `kind`
+
+Usage:
+![kGif](./demo_src/kdes.gif)
+---
+### kdel
+Delete a resource
+
+Params:
+* `kind`
+
+Usage:
+![kGif](./demo_src/kdel.gif)
+---
+### klog
+Fetch log from a container
+
+Params:
+* \[`lines` `extra-flag`\](optional)
+
+Usage:
+![kGif](./demo_src/klog.gif)
+---
+### kex
+Execute a command in a container
+
+Params:
+* `*`
+
+Usage:
+![kGif](./demo_src/kex.gif)
+---
+### kfor
+Port-forward a local port to a pod
+
+Params:
+* `port` | `host-port:container-port`
+
+Usage:
+![kGif](./demo_src/kfor.gif)
+---
+### ksearch
+Search for string in resources
+
+Params:
+* `grep-regex`
+
+Usage:
+![kGif](./demo_src/ksearch.gif)
+---
+### kcl
+Context list
+
+Usage:
+![kGif](./demo_src/kcl.gif)
+---
+### kcs
+Context set
+
+Usage:
+![kGif](./demo_src/kcs.gif)
+---
+### kdebug
+Start debugging Pod in Cluster
+
+Usage:
+![kGif](./demo_src/kdebug.gif)
+---
+### kp
+Opens a Kubernetes dashboard
+
+---
+
+## Installation
+
+You can directly download the [`fubeconfig.source`](https://rawgit.com/realfake/fubectl/master/fubectl.source)
+and save it in some directory.
+
+Download:
+```sh
+curl -LO https://rawgit.com/realfake/fubectl/master/fubectl.source
+```
+
+then add to your .bashrc/.zshrc file:
+```sh
+[ -f <path-to>/fubeconfig.source ] && source <path-to>/fubeconfig.source
+```
 
 ## Extra!
 Do you wan't to have the current kubecontext in your prompt?:

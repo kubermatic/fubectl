@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "width": 95,
+  "height": 25,
+  "duration": 13.488102,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.120564,
+      "\u001b]7;file://realfake-mbp/Users/realfake/go/src/github.com/realfake/fubectl/demo_src\u0007"
+    ],
+    [
+      1.510415,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      0.000103,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      3e-05,
+      "\u001b]1;..ectl/demo_src\u0007"
+    ],
+    [
+      0.004255,
+      "\u001b]7;file://realfake-mbp/Users/realfake/go/src/github.com/realfake/fubectl/demo_src\u0007"
+    ],
+    [
+      0.032634,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~/go/src/github.com/realfake/fubectl/demo_src [master*] $\u001b[00m \u001b[K\u001b[4C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[14D"
+    ],
+    [
+      0.000153,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      9.2e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.658405,
+      "k"
+    ],
+    [
+      0.262736,
+      "\bkf"
+    ],
+    [
+      0.1926,
+      "o"
+    ],
+    [
+      0.143587,
+      "r\u001b[K"
+    ],
+    [
+      0.175275,
+      " "
+    ],
+    [
+      1.144971,
+      "4"
+    ],
+    [
+      0.320008,
+      "4"
+    ],
+    [
+      0.231272,
+      "4"
+    ],
+    [
+      0.263814,
+      "4"
+    ],
+    [
+      0.399936,
+      ":"
+    ],
+    [
+      0.360095,
+      "5"
+    ],
+    [
+      0.303982,
+      "3"
+    ],
+    [
+      0.319443,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.2e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001006,
+      "\u001b]2;kfor 4444:53\u0007\u001b]1;kfor\u0007"
+    ],
+    [
+      0.18186,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000382,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001718,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      8.2e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[1B\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C"
+    ],
+    [
+      3.6e-05,
+      "\u001b[;38;5;109mNAMESPACE     NAME                                    READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   heapster-758bk                          1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influxdb-grafana-cvrgz                  2/2       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-addon-manager-minikube             1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-dns-54cccfbdf8-lrrpd               3/3       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-77d8b98585-nm4kk   1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-7d5q4        "
+    ],
+    [
+      6.1e-05,
+      "                  1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   storage-provisioner                     1/1       Running   0          9m\u001b[m\u001b[7A\r\u001b[2C\u001b[;m                                                                                             \r\u001b[2C\u001b[;38;5;109mNAMESPACE     NAME                                    READY     STATUS    RESTARTS   AGE\u001b[m\u001b[1A\r\u001b[2C"
+    ],
+    [
+      0.019912,
+      "\r\u001b[2C"
+    ],
+    [
+      1.196261,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1md\u001b[m\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m7/7\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000391,
+      "\r\u001b[4C\u001b[;m                                                                                           \r\u001b[4C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236mns-54cccfbdf8-lrrpd               3/3       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mashboard-77d8b98585-nm4kk   1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influx\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mb-grafana-cvrgz                  2/2       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-a\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mdon-manager-minikube             1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-7\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m5q4                          1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;m                                    "
+    ],
+    [
+      0.000117,
+      "                                                           \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[8A\r\u001b[3C"
+    ],
+    [
+      0.151104,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdn\u001b[m\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000372,
+      "\r\u001b[5C\u001b[;m                                                                                          \r\u001b[5C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236ms-54cccfbdf8-lrrpd               3/3       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kubernetes-dashboard-77\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;m8b98585-\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mm4kk   1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   kube-ad\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mo\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m-manager-minikube             1/1       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   influx\u001b[m\u001b[;38;5;108md\u001b[m\u001b[;mb-grafa\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;ma-cvrgz                  2/2       Running   0          9m\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkube-system   registry-7\u001b[m\u001b[;38;5;108md"
+    ],
+    [
+      4.8e-05,
+      "\u001b[m\u001b[;m5q4                          1/1       Ru\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mning   0          9m\u001b[m\u001b[6A\r\u001b[4C"
+    ],
+    [
+      0.071847,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdns\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m5/7\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.00018,
+      "\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/7\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkube-system   kube-\u001b[m\u001b[;1;38;5;151;48;5;236md\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236ms\u001b[m\u001b[;1;38;5;254;48;5;236m-54cccfbdf8-lrrpd               3/3       Running   0          9m\u001b[m\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[6A\r\u001b[5C"
+    ],
+    [
+      0.590461,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mdns\u001b[m\r\u001b[6C\u001b[;m                                                                                         \r\u001b[6C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m1/7\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.156575,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000389,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[11A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001159,
+      "\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[11B\r\u001b[;38;5;59m───────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[10A\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                              "
+    ],
+    [
+      3e-05,
+      " \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[1B\r\u001b[;m                                                                                               \r\u001b[9A\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/3\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;"
+    ],
+    [
+      3e-05,
+      "38;5;110m < \u001b[m\u001b[;38;5;144m3/3\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkubedns\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mdnsmasq\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msidecar\u001b[m\u001b[3A\r\u001b[2C"
+    ],
+    [
+      0.020016,
+      "\r\u001b[2C"
+    ],
+    [
+      0.887,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/3\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mkubedns\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mdnsmasq\u001b[m\u001b[2A\r\u001b[2C"
+    ],
+    [
+      1.231221,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/3\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236mkubedns\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;mdnsmasq\u001b[m\u001b[2A\r\u001b[2C"
+    ],
+    [
+      0.279385,
+      "\r\u001b[;m                                                                                               \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[3C\u001b[;m                                                                                            \r\u001b[3C\u001b[;1;38;5;110m < \u001b[m\u001b[;38;5;144m3/3\u001b[m\u001b[1A\r\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.002118,
+      "kubectl port-forward -n kube-system kube-dns-54cccfbdf8-lrrpd 4444:53\r\n"
+    ],
+    [
+      0.164788,
+      "Forwarding from 127.0.0.1:4444 -> 53\r\n"
+    ],
+    [
+      1.617381,
+      "^C"
+    ],
+    [
+      0.003501,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                              \r \r"
+    ],
+    [
+      3e-05,
+      "\u001b]2;realfake@realfake-mbp\u0007"
+    ],
+    [
+      1.8e-05,
+      "\u001b]1;..ectl/demo_src\u0007"
+    ],
+    [
+      0.0034,
+      "\u001b]7;file://realfake-mbp/Users/realfake/go/src/github.com/realfake/fubectl/demo_src\u0007"
+    ],
+    [
+      0.032239,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32mrealfake@realfake-mbp \u001b[01;34m~/go/src/github.com/realfake/fubectl/demo_src [master*] $\u001b[00m \u001b[K\u001b[4C\u001b[01;30m[\u001b[01;31mminikube\u001b[01;30m]\u001b[00m\u001b[14D"
+    ],
+    [
+      8.1e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.385288,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}
