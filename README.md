@@ -51,7 +51,7 @@ Usage:
 Fetch log from a container
 
 Params:
-* \[`lines` `extra-flag`\](optional)
+* \[`lines`\] \[`extra-flag`\]
 
 Usage:
 ![kGif](./demo_src/klog.gif)
