@@ -97,7 +97,7 @@ ksearch() {
   done
 }
 
-# kcs (context list)
+# kcl (context list)
 alias kcl='kubectl config get-contexts'
 
 # kcs (context set)
