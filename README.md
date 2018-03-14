@@ -8,12 +8,12 @@ Because it's fancy-kubectl!
 
 ## Installation
 
-You can directly download the [`fubectl.source`](https://rawgit.com/realfake/fubectl/master/fubectl.source)
+You can directly download the [`fubectl.source`](https://rawgit.com/kubermatic/fubectl/master/fubectl.source)
 and save it in some directory.
 
 Download:
 ```bash
-curl -LO https://rawgit.com/realfake/fubectl/master/fubectl.source
+curl -LO https://rawgit.com/kubermatic/fubectl/master/fubectl.source
 ```
 
 then add to your .bashrc/.zshrc file:
