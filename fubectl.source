@@ -21,6 +21,20 @@ alias kwall="watch kubectl get pods --all-namespaces"
 # Open kubernetes dashboard
 alias kp="open 'http://localhost:8001/ui' && kubectl proxy"
 
+
+# watch (watch resource)
+kwatch() {
+  case "$1" in
+  # TODO Add more
+  nodes|no|node|ns|namespace|namespaces)
+          kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs watch kubectl get "${1}"
+          ;;
+  *)
+          kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs watch kubectl get "${1}" -n
+          ;;
+  esac
+}
+
 # kdes (describe resource)
 kdes() {
   case "$1" in
@@ -118,3 +132,28 @@ kcns() {
 }
 # kdebug (start debugging in cluster)
 alias kdebug='kubectl run test --rm --restart=Never -it --image=ubuntu -- bash'
+
+# kinfo (Print the commands)
+kinfo() {
+  echo "Usage of fubectl"
+  echo ""
+  echo "Reduces repetitive interactions with kubectl"
+  echo "Find more information at https://github.com/kubermatic/fubectl"
+  echo ""
+  echo "Commands:"
+  echo "  k           alias for kubectl"
+  echo "  kall        All pods in all namespaces"
+  echo "  kcl         Displays one or many contexts from the kubeconfig file"
+  echo "  kcns        Switch the default namespace"
+  echo "  kcs         Sets the current context"
+  echo "  kdebug      Start a debugging Pod in a Cluster"
+  echo "  kdel        Delete a resource"
+  echo "  kdes        Describe a resource"
+  echo "  kex         Execute a command in a container"
+  echo "  kfor        Forward one or more local ports to a pod"
+  echo "  klog        Print the logs for a container in a pod"
+  echo "  kp          Open the Kubernetes dashboard"
+  echo "  ksearch     Search for string in resources"
+  echo "  kwall       Watch all pods in all namespaces"
+  echo "  kwatwch     Watch a resource"
+}
