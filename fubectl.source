@@ -146,6 +146,13 @@ kcns() {
     eval kubectl config set-context "$(kubectl config current-context)" --namespace="${ns}"
 }
 
+# [kwns] watch pods in a namespace
+kwns() {
+    local ns=""
+    ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
+    watch kubectl get pod -n "$ns"
+}
+
 # [khelp] show this help message
 khelp() {
     echo "Usage of fubectl"
