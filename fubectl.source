@@ -73,7 +73,7 @@ kdel() {
     case "$1" in
     # TODO Add more
     nodes|no|node|ns|namespace|namespaces)
-        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl describe "${1}"
+        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl delete "${1}"  
     ;;
     *)
         kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl delete "${1}" -n
