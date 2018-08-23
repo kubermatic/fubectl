@@ -153,6 +153,11 @@ khelp() {
     echo "Reduces repetitive interactions with kubectl"
     echo "Find more information at https://github.com/kubermatic/fubectl"
     echo
-    echo "Usage:"    
-    grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
+    echo "Usage:"
+    if [ -n "$ZSH_VERSION" ]
+    then
+        grep -E '^# \[.+\]' "${(%):-%x}"
+    else
+        grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
+    fi
 }
