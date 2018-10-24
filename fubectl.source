@@ -95,6 +95,14 @@ klog() {
     eval kubectl logs -n "${arg_pair} -c ${pod_choosen}" --tail="${line_count}" "$@"
 }
 
+# [klogf] fetch and watch log from container
+klogf() {
+    arg_pair=$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')
+    pods_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
+    pod_choosen=$(echo "$pods_out" |  tr ' ' "\n" | _inline_fzf_nh)
+    eval kubectl logs -f -n "${arg_pair} -c ${pod_choosen}" "$@"
+}
+
 # [kex] execute command in container
 kex() {
     arg_pair=$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')
