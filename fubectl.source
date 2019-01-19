@@ -14,6 +14,14 @@ alias kwall="watch kubectl get pods --all-namespaces"
 # [kp] open kubernetes dashboard with proxy
 alias kp="open 'http://localhost:8001/ui' && kubectl proxy"
 
+# Return ture if the given resource name is namespaced in k8s
+_is_non_namespaced_resource() {
+  non_namespaced_resource_names=$(kubectl api-resources --namespaced=false --no-headers=true | awk '{ print $1,$2 }' | tr ',' ' ' | tr '\n' ' ')
+  [[ $non_namespaced_resource_names =~ (^|[[:space:]])$1($|[[:space:]]) ||
+  # in case of plural form of the same name, e.g. node,nodes
+    $non_namespaced_resource_names =~ (^|[[:space:]])$1[s]($|[[:space:]]) ]] 
+}
+
 # [kwatch] watch resource
 kwatch() {
     case "$1" in
