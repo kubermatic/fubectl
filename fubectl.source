@@ -30,7 +30,7 @@ alias kwall="watch kubectl get pods --all-namespaces"
 
 # TODO check if this works for macs
 # [kp] open kubernetes dashboard with proxy
-alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' && kubectl proxy"
+alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' & kubectl proxy"
 
 # [kwatch] watch resource
 kwatch() {
