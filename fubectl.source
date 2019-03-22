@@ -1,30 +1,54 @@
 # helper functions
 alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
 alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
+_isNamespaced(){
+    if [[ "$1" == "" ]]; then
+        echo "please specify a Kubernetes object!"
+        exit 1
+    fi
+    # ask cluster about not namespaced resources
+    if [ $(kubectl api-resources --no-headers --namespaced=false | awk '{print $1,$2,$4}' | sed 's/ /\n/g' | grep --count -i "^$1$")  -gt 0 ]; then
+        return 0
+   else
+        return 1
+    fi
+}
 
 # [k] like g for git but 233% as effective!
 alias k="kubectl"
 
-# [kall] get all pods
+# [ka] get all pods in namespace
+alias ka="kubectl get pods"
+
+# [kall] get all pods in cluster
 alias kall="kubectl get pods --all-namespaces"
 
-# [kwall] watch all pods
+# [kwa] watch all pods in namespace
+alias kwa="watch kubectl get pods"
+
+# [kwall] watch all pods in cluster
 alias kwall="watch kubectl get pods --all-namespaces"
 
+# TODO check if this works for macs
 # [kp] open kubernetes dashboard with proxy
-alias kp="open 'http://localhost:8001/ui' && kubectl proxy"
+alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' && kubectl proxy"
+
+# TODO remove after review
+ktestNamespaced() {
+    if _isNamespaced $1 ; then
+        echo "namespaced!"
+    else
+        echo ":-("
+    fi
+}
 
 # [kwatch] watch resource
 kwatch() {
-    case "$1" in
-    # TODO Add more
-    nodes|no|node|ns|namespace|namespaces)
+    if _isNamespaced $1 ; then
         kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs watch kubectl get "${1}"
-    ;;
-    *)
+    else
         kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs watch kubectl get "${1}" -n
-    ;;
-    esac
+    fi
 }
 
 # [kdebug] start debugging in cluster
@@ -44,41 +68,38 @@ kube_ctx_namespace() {
 
 # [kget] get a resource by its YAML
 kget() {
-    case "$1" in
-    # TODO Add more
-    nodes|no|node|ns|namespace|namespaces)
+    if _isNamespaced $1 ; then
         kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl get -o yaml "${1}"
-    ;;
-    *)
+    else
         kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl get -o yaml "${1}" -n
-    ;;
-    esac
+    fi
+}
+
+# [ked] edit a resource by its YAML
+ked() {
+    if _isNamespaced $1 ; then
+        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl edit "${1}"
+    else
+        kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl edit "${1}" -n
+    fi
 }
 
 # [kdes] describe resource
 kdes() {
-    case "$1" in
-    # TODO Add more
-    nodes|no|node|ns|namespace|namespaces)
+    if _isNamespaced $1 ; then
         kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl describe "${1}"
-    ;;
-    *)
+    else
         kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl describe "${1}" -n
-    ;;
-    esac
+    fi
 }
 
 # [kdel] delete resource
 kdel() {
-    case "$1" in
-    # TODO Add more
-    nodes|no|node|ns|namespace|namespaces)
-        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs -p kubectl delete "${1}"  
-    ;;
-    *)
+    if _isNamespaced $1 ; then
+        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs -p kubectl delete "${1}"
+    else
         kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -p kubectl delete "${1}" -n
-    ;;
-    esac
+    fi
 }
 
 # [klog] fetch log from container
