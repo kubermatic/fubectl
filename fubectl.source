@@ -23,7 +23,7 @@ alias ka="kubectl get pods"
 # [kall] get all pods in cluster
 alias kall="kubectl get pods --all-namespaces"
 
-# [kwa] watch all pods in namespace
+# [kwa] watch all pods in the current namespace
 alias kwa="watch kubectl get pods"
 
 # [kwall] watch all pods in cluster
