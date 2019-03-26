@@ -6,7 +6,7 @@ _isClusterSpaceObject() {
   obj="$1"
   if [ -z "$obj" ]; then
     echo "please specify a Kubernetes object!"
-    exit 1
+    kill -INT $$
   fi
 
   kubectl api-resources --namespaced=false \
