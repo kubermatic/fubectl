@@ -67,11 +67,17 @@ kget() {
 
 # [ked] edit a resource by its YAML
 ked() {
-    if _isClusterSpaceObject $1 ; then
-        kubectl get "${1}" | _inline_fzf | awk '{print $1}' | xargs kubectl edit "${1}"
-    else
-        kubectl get "${1}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl edit "${1}" -n
+    kind="$1"
+    if [ -z "$kind" ]; then
+      echo "ked requires resource-type (pod,deployment,...) as argument."
+      return
     fi
+    if _isClusterSpaceObject $kind ; then
+        edit_args=$(kubectl get "$kind" | _inline_fzf | awk '{print $1}')
+    else
+        edit_args=$(kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print "-n", $1, $2}')
+    fi
+    kubectl edit "$kind" $edit_args
 }
 
 # [kdes] describe resource
