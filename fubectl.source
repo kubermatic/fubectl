@@ -187,6 +187,46 @@ kwns() {
     watch kubectl get pod -n "$ns"
 }
 
+# [kbash] create a pod with a bash
+kbash() {
+    kubectl run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu -- bash
+}
+
+# [kssh] create root shell on a node
+kssh() {
+    local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
+    local overrides='{
+    	"spec": {
+    		"hostPID": true,
+    		"containers": [
+    			{
+    				"name": "my-shell",
+    				"image": "ubuntu",
+    				"command": [
+    					"/bin/sh"
+    				],
+    				"args": [
+              "-c", "nsenter -t 1 -m -u -i -n -p --"
+      			],
+    				"resources": null,
+    				"stdin": true,
+    				"stdinOnce": true,
+    				"terminationMessagePath": "/dev/termination-log",
+    				"terminationMessagePolicy": "File",
+    				"tty": true,
+    				"securityContext": {
+    					"privileged": true
+    				}
+    			}
+    		],
+    		"nodeSelector": {
+    			"kubernetes.io/hostname": "'$node'"
+    		}
+    	}
+    }'
+    kubectl run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu --overrides=$overrides
+}
+
 # [khelp] show this help message
 khelp() {
     echo "Usage of fubectl"
