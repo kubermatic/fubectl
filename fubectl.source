@@ -192,8 +192,8 @@ kbash() {
     kubectl run --generator=run-pod/v1 shell-$RANDOM --rm -i --tty --image ubuntu -- bash
 }
 
-# [kssh] create root shell on a node
-kssh() {
+# [konsole] create root shell on a node
+konsole() {
     local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
     local name=shell-$RANDOM
     local overrides='{
