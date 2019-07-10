@@ -189,18 +189,19 @@ kwns() {
 
 # [kbash] create a pod with a bash
 kbash() {
-    kubectl run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu -- bash
+    kubectl run --generator=run-pod/v1 shell-$RANDOM --rm -i --tty --image ubuntu -- bash
 }
 
 # [kssh] create root shell on a node
 kssh() {
     local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
+    local name=shell-$RANDOM
     local overrides='{
     	"spec": {
     		"hostPID": true,
     		"containers": [
     			{
-    				"name": "my-shell",
+    				"name": "'$name'",
     				"image": "ubuntu",
     				"command": [
     					"/bin/sh"
@@ -224,7 +225,7 @@ kssh() {
     		}
     	}
     }'
-    kubectl run --generator=run-pod/v1 my-shell --rm -i --tty --image ubuntu --overrides=$overrides
+    kubectl run --generator=run-pod/v1 $name --rm -i --tty --image ubuntu --overrides=$overrides
 }
 
 # [khelp] show this help message
