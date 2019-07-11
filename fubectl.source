@@ -196,36 +196,39 @@ kbash() {
 konsole() {
     local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
     local name=shell-$RANDOM
-    local overrides='{
-    	"spec": {
-    		"hostPID": true,
-    		"containers": [
-    			{
-    				"name": "'$name'",
-    				"image": "ubuntu",
-    				"command": [
-    					"/bin/sh"
-    				],
-    				"args": [
-              "-c", "nsenter -t 1 -m -u -i -n -p --"
-      			],
-    				"resources": null,
-    				"stdin": true,
-    				"stdinOnce": true,
-    				"terminationMessagePath": "/dev/termination-log",
-    				"terminationMessagePolicy": "File",
-    				"tty": true,
-    				"securityContext": {
-    					"privileged": true
-    				}
-    			}
-    		],
-    		"nodeSelector": {
-    			"kubernetes.io/hostname": "'$node'"
-    		}
-    	}
-    }'
-    kubectl run --generator=run-pod/v1 $name --rm -i --tty --image ubuntu --overrides=$overrides
+    local overrides='
+{
+    "spec": {
+        "hostPID": true,
+        "containers": [
+            {
+                "name": "'$name'",
+                "image": "ubuntu",
+                "command": [
+                    "/bin/sh"
+                ],
+                "args": [
+                    "-c",
+                    "nsenter -t 1 -m -u -i -n -p --"
+                ],
+                "resources": null,
+                "stdin": true,
+                "stdinOnce": true,
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "tty": true,
+                "securityContext": {
+                    "privileged": true
+                }
+            }
+        ],
+        "nodeSelector": {
+            "kubernetes.io/hostname": "'$node'"
+        }
+    }
+}
+'
+    kubectl run --generator=run-pod/v1 $name --rm -it --image ubuntu --overrides="${overrides}"
 }
 
 # [khelp] show this help message
