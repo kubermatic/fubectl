@@ -195,6 +195,7 @@ kbash() {
 # [konsole] create root shell on a node
 konsole() {
     local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
+    local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     local name=shell-$RANDOM
     local overrides='
 {
@@ -203,13 +204,13 @@ konsole() {
         "containers": [
             {
                 "name": "'$name'",
-                "image": "ubuntu",
+                "image": "alpine",
                 "command": [
                     "/bin/sh"
                 ],
                 "args": [
                     "-c",
-                    "nsenter -t 1 -m -u -i -n -p --"
+                    "nsenter -t 1 -m -u -i -n -p -- bash"
                 ],
                 "resources": null,
                 "stdin": true,
@@ -228,7 +229,7 @@ konsole() {
     }
 }
 '
-    kubectl run --generator=run-pod/v1 $name --rm -it --image ubuntu --overrides="${overrides}"
+    kubectl run --generator=run-pod/v1 $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
 }
 
 # [khelp] show this help message
