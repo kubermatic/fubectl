@@ -194,7 +194,7 @@ kbash() {
 
 # [konsole] create root shell on a node
 konsole() {
-    local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
+    local node_hostname="$(kubectl get node --label-columns=kubernetes.io/hostname | _inline_fzf | awk '{print $6}')"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     local name=shell-$RANDOM
     local overrides='
@@ -224,7 +224,7 @@ konsole() {
             }
         ],
         "nodeSelector": {
-            "kubernetes.io/hostname": "'$node'"
+            "kubernetes.io/hostname": "'$node_hostname'"
         }
     }
 }
