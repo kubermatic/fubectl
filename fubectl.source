@@ -124,7 +124,7 @@ klog() {
     [ -z "$arg_pair" ] && printf "klog: no pods found. no logs can be shown.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name} {.spec.initContainers[*].name}' -n | sed 's/ $//')
     local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
-    eval kubectl logs -n "${arg_pair} -c ${container_choosen}" --tail="${line_count}" "$@"
+    kubectl logs -n ${arg_pair} -c "${container_choosen}" --tail="${line_count}" "$@"
 }
 
 # [kex] execute command in container
@@ -134,7 +134,7 @@ kex() {
     [ -z "$arg_pair" ] && printf "kex: no pods found. no execution.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
     local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
-    eval kubectl exec -it -n "${arg_pair}" -c "${container_choosen}" -- "$@"
+    kubectl exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
 }
 
 # [kfor] port-forward a container port to your local machine
@@ -144,7 +144,7 @@ kfor() {
     local arg_pair="$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')"
     [ -z "$arg_pair" ] && printf "kfor: no pods found. no forwarding.\n" && return
     echo "kubectl port-forward -n $arg_pair $port"
-    eval kubectl port-forward -n "$arg_pair" "$port"
+    kubectl port-forward -n $arg_pair "$port"
 }
 
 # [ksearch] search for string in resources
@@ -166,8 +166,8 @@ alias kcl='kubectl config get-contexts'
 
 # [kcs] context set
 kcs() {
-    local context="$(kubectl config get-contexts | _inline_fzf | awk '{print $1}')"
-    eval kubectl config set current-context "${context}"
+    local context="$(kubectl config get-contexts | _inline_fzf | cut -b4- | awk '{print $1}')"
+    kubectl config set current-context "${context}"
 }
 
 # [kcns] context set default namespace
@@ -177,7 +177,7 @@ kcns() {
         ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     fi
     [ -z "$ns" ] && printf "kcns: no namespace selected/found.\nUsage: kcns [NAMESPACE]\n" && return
-    eval kubectl config set-context "$(kubectl config current-context)" --namespace="${ns}"
+    kubectl config set-context "$(kubectl config current-context)" --namespace="${ns}"
 }
 
 # [kwns] watch pods in a namespace
