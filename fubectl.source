@@ -39,7 +39,7 @@ kwatch() {
     fi
 }
 
-# [kdebug] start debugging in cluster
+# [kdebug] start debugging container (nicolaka/netshoot) in the current namespace
 alias kdebug='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
 
 # [kube_ctx_name] get the current context
