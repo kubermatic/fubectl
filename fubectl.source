@@ -40,7 +40,9 @@ kwatch() {
 }
 
 # [kdebug] start debugging container (nicolaka/netshoot) in the current namespace
-alias kdebug='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
+kdebug() {
+    kubectl run --generator=run-pod/v1 kdebug-$RANDOM --rm -i --tty --image nicolaka/netshoot -- /bin/bash
+}
 
 # [kube_ctx_name] get the current context
 kube_ctx_name() {
@@ -189,14 +191,14 @@ kwns() {
 
 # [kbash] create a pod (ubuntu) with a bash
 kbash() {
-    kubectl run --generator=run-pod/v1 shell-$RANDOM --rm -i --tty --image ubuntu -- bash
+    kubectl run --generator=run-pod/v1 kbash-$RANDOM --rm -i --tty --image ubuntu -- bash
 }
 
 # [konsole] create root shell (alpine) on a node
 konsole() {
     local node="$(kubectl get node | _inline_fzf | awk '{print $1}')"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
-    local name=shell-$RANDOM
+    local name=konsole-$RANDOM
     local overrides='
 {
     "spec": {
