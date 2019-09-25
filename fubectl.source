@@ -201,6 +201,7 @@ konsole() {
 {
     "spec": {
         "hostPID": true,
+        "hostNetwork": true,
         "containers": [
             {
                 "name": "'$name'",
