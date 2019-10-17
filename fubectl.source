@@ -248,3 +248,15 @@ khelp() {
         grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
     fi
 }
+
+# [ksec] base64 decode the values of a secret, namespace optional
+ksec () {
+        if [[ -n "$1" ]]
+        then
+                ns="$1"
+        else
+                ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
+        fi
+        secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
+        kubectl get secret -n "$ns" "$secret" -o json | jq -r '.data | to_entries[] | "\(.key): \(.value | @base64d)"'
+}
