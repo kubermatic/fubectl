@@ -4,6 +4,7 @@ Because it's fancy-kubectl!
 ## Prerequisites?
 * [fzf](https://github.com/junegunn/fzf)
 * [kubectl](https://github.com/kubernetes/kubernetes)
+* [kubectl tree](https://github.com/ahmetb/kubectl-tree)
 * [jq](https://stedolan.github.io/jq/)
 
 ## Installation

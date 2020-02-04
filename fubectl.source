@@ -187,6 +187,19 @@ kwns() {
     watch kubectl get pod -n "$ns"
 }
 
+# [ktree] prints a tree of k8s objects (kubectl tree plugin needs to be installed)
+ktree() {
+    local kind="$1"
+    if [ -z "$kind" ]; then
+        local kind="$(kubectl api-resources -o name | _inline_fzf | awk '{print $1}')"
+    fi
+    if _isClusterSpaceObject "$kind" ; then
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl tree "$kind"
+    else
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl tree "$kind" -n
+    fi
+}
+
 # [kbash] create a pod with a bash
 kbash() {
     kubectl run --generator=run-pod/v1 shell-$RANDOM --rm -i --tty --image ubuntu -- bash
