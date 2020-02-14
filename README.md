@@ -172,3 +172,30 @@ for the current namespace (this is currently slow, because it calls kubectl ever
 ```bash
 export PS1="\[$(kube_ctx_namespace)\] $PS1"
 ```
+
+
+## Troubleshooting
+
+If you encounter issues [file an issue][1] or talk to us on the [#fubectl channel][12] on the [Kubermatic Slack][15].
+
+## Contributing
+
+Thanks for taking the time to join our community and start contributing!
+
+Feedback and discussion are available on [Kubermatic Slack][15].
+
+### Before you start
+
+* Please familiarize yourself with the [Code of Conduct][4] before contributing.
+* See [CONTRIBUTING.md][2] for instructions on the developer certificate of origin that we require.
+
+### Pull requests
+
+* We welcome pull requests. Feel free to dig through the [issues][1] and jump in.
+
+[1]: https://github.com/kubermatic/fubectl/issues
+[2]: https://github.com/kubermatic/fubectl/blob/master/CONTRIBUTING.md
+[4]: https://github.com/kubermatic/fubectl/blob/master/CODE_OF_CONDUCT.md
+
+[12]: https://kubermatic.slack.com/messages/fubectl
+[15]: http://slack.kubermatic.io/
