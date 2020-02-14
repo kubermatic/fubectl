@@ -21,6 +21,9 @@ then add to your .bashrc/.zshrc file:
 [ -f <path-to>/fubectl.source ] && source <path-to>/fubectl.source
 ```
 
+Alternatively you can install fubectl using the ZSH plugin manager of your
+choice.
+
 ## What can it do?
 
 ### k - alias for kubectl
