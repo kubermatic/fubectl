@@ -1,0 +1,17 @@
+# See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
+
+approvers:
+  - toschneck
+  - thz
+  - eqrx
+  - scheeles
+  - xrstf
+  - kron4eg
+
+reviewers:
+  - toschneck
+  - thz
+  - eqrx
+  - scheeles
+  - xrstf
+  - kron4eg
