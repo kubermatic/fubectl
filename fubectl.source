@@ -39,8 +39,20 @@ kwatch() {
     fi
 }
 
-# [kdebug] start debugging in cluster
-alias kdebug='kubectl run test --rm --restart=Never -it --image=ubuntu -- bash'
+# [kcmd] create a pod and execute a cmd/image (default bash/ubuntu) usage: "kcmd cmd" or "kcmd cmd image"
+kcmd() {
+    local cmd="$1"
+    local image="ubuntu"
+    if [ -n "$2" ]; then
+        image="$2"
+    fi
+    local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
+    if [ -n "$cmd" ]; then
+        kubectl run --generator=run-pod/v1 shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/sh -c "${cmd}"
+    else
+        kubectl run --generator=run-pod/v1 shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- bash
+    fi
+}
 
 # [kube_ctx_name] get the current context
 kube_ctx_name() {
@@ -198,11 +210,6 @@ ktree() {
     else
         kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl tree "$kind" -n
     fi
-}
-
-# [kbash] create a pod with a bash
-kbash() {
-    kubectl run --generator=run-pod/v1 shell-$RANDOM --rm -i --tty --image ubuntu -- bash
 }
 
 # [konsole] create root shell on a node
