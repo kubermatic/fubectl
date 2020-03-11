@@ -39,7 +39,7 @@ kwatch() {
     fi
 }
 
-# [kcmd] create a pod and execute a cmd (default bash)
+# [kcmd] create a pod and execute a cmd/image (default bash/ubuntu) usage: "kcmd cmd" or "kcmd cmd image"
 kcmd() {
     local cmd="$1"
     local image="ubuntu"
