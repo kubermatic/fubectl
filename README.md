@@ -41,6 +41,16 @@ Usage:
 
 ---
 
+### kw - alias for 'watch kubectl'
+
+
+Examples:
+ - `kw get nodes`
+ - `kw get pods`
+ - `kw get nodes,pods,services`
+
+---
+
 ### kall - All pods in all namespaces
 
 Get all pods
