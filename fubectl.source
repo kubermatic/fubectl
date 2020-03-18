@@ -13,7 +13,7 @@ _isClusterSpaceObject() {
 alias k="kubectl"
 
 # [kw] kw get po,svc,md
-alias kw="watch kubectl"
+alias kw="watch kubectl get"
 
 # [ka] get all pods in namespace
 alias ka="kubectl get pods"
