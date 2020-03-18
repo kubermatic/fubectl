@@ -41,18 +41,18 @@ Usage:
 
 ---
 
-### kall - All pods in all namespaces
+### ka, kall - All pods in (all) namespaces
 
-Get all pods
+Get all pods - use kall to get from all namespaces.
 
 Usage:
 ![kGif](./demo_src/kall.gif)
 
 ---
 
-### kwall - Watch all pods in all namespaces
+### kwa, kwall - Watch all pods in (all) namespaces
 
-Watch all pods in all namespaces every 2 seconds.
+Get all pods every 2 seconds. Use `kwall` to get from all namespaces.
 
 Usage:
 ![kGif](./demo_src/kwall.gif)
