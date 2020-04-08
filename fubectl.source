@@ -253,7 +253,7 @@ konsole() {
     kubectl run --generator=run-pod/v1 $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
 }
 
-# [kinstall] Install kubectl plugins
+# [kinstall] Install the required kubectl plugins
 kinstall() {
     kubectl krew install tree
 }
