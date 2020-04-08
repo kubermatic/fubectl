@@ -18,6 +18,9 @@ _isClusterSpaceObject() {
 # [k] like g for git but 233% as effective!
 alias k="kubectl"
 
+# [kw] kw get po,svc,md
+alias kw="watch kubectl get"
+
 # [ka] get all pods in namespace
 alias ka="kubectl get pods"
 
@@ -30,7 +33,7 @@ alias kwa="watch kubectl get pods"
 # [kwall] watch all pods in cluster
 alias kwall="watch kubectl get pods --all-namespaces"
 
-# TODO check if this works for macs
+# TODO use "open" instead of "xdg-open" on a mac - also redirect xdg-open std{out,err} to /dev/null
 # [kp] open kubernetes dashboard with proxy
 alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' & kubectl proxy"
 
