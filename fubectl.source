@@ -253,6 +253,15 @@ konsole() {
     kubectl run --generator=run-pod/v1 $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
 }
 
+# [kinstall] Install kubectl plugins
+kinstall() {
+    kubectl krew install tree
+}
+# [kupdate] Updates kubectl plugins
+kupdate() {
+    kubectl krew upgrade
+}
+
 # [khelp] show this help message
 khelp() {
     echo "Usage of fubectl"
