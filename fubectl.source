@@ -261,7 +261,7 @@ konsole() {
     kubectl run $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
 }
 
-# [ksec] decode a values of a secret
+# [ksec] decode a value from a secret
 ksec () {
     ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
