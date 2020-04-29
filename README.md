@@ -45,9 +45,9 @@ Usage:
 
 
 Examples:
- - `kw get nodes`
- - `kw get pods`
- - `kw get nodes,pods,services`
+ - `kw nodes`
+ - `kw pods`
+ - `kw nodes,pods,services`
 
 ---
 
