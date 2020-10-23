@@ -86,6 +86,17 @@ kget() {
     fi
 }
 
+# [kget-ex] get a resource by its YAML as former `--export` flag
+kget-ex() {
+    kget "$@" \
+    | yq d - 'metadata.resourceVersion' \
+    | yq d - 'metadata.uid' \
+    | yq d - 'metadata.creationTimestamp' \
+    | yq d - 'metadata.selfLink' \
+    | yq d - 'metadata.managedFields'\
+    | yq d - 'status'
+}
+
 # [ked] edit a resource by its YAML
 ked() {
     local kind="$1"
