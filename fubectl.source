@@ -93,8 +93,8 @@ kget-ex() {
     | yq d - 'metadata.uid' \
     | yq d - 'metadata.creationTimestamp' \
     | yq d - 'metadata.selfLink' \
-    | yq d - 'metadata.managedFields'\
-    | yq d - 'metadata.annotations.kubectl*'\
+    | yq d - 'metadata.managedFields' \
+    | yq d - 'metadata.annotations.kubectl*' \
     | yq d - 'status'
 }
 
