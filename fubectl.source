@@ -86,16 +86,25 @@ kget() {
     fi
 }
 
-# [kget-ex] get a resource by its YAML as former `--export` flag
-kget-ex() {
-    kget "$@" |
-        yq d - 'metadata.resourceVersion' |
-        yq d - 'metadata.uid' |
-        yq d - 'metadata.creationTimestamp' |
-        yq d - 'metadata.selfLink' |
-        yq d - 'metadata.managedFields' |
-        yq d - 'metadata.annotations.kubectl*' |
-        yq d - 'status'
+# [kexp] as former `--export` field removes unwanted metadata - usage: COMMAND | kexp
+kexp(){
+  if [ -t 0 ]; then
+    echo "kexp has no piped input!"
+    echo "usage: COMMAND | kexp"
+  else
+    yq d - 'metadata.resourceVersion' |
+    yq d - 'metadata.uid' |
+    yq d - 'metadata.creationTimestamp' |
+    yq d - 'metadata.selfLink' |
+    yq d - 'metadata.managedFields' |
+    yq d - 'metadata.annotations.kubectl*' |
+    yq d - 'status'
+  fi
+}
+
+# [kget-exp] get a resource by its YAML as former `--export` flag
+kget-exp() {
+    kget "$@" | kexp
 }
 
 # [ked] edit a resource by its YAML
@@ -232,11 +241,11 @@ ktree() {
     fi
 }
 
-# [konsole] create root shell on a node
+# [konsole] create root shell (alpine) on a node
 konsole() {
     local node_hostname="$(kubectl get node --label-columns=kubernetes.io/hostname | _inline_fzf | awk '{print $6}')"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
-    local name=shell-$RANDOM
+    local name=konsole-$RANDOM
     local overrides='
 {
     "spec": {
@@ -277,7 +286,7 @@ konsole() {
 ksec () {
     ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
-    local key=$(kubectl get secret -n "$ns" "$secret" -o json | jq -r '.data | to_entries[] | "\(.key)"' | _inline_fzf_nh)       
+    local key=$(kubectl get secret -n "$ns" "$secret" -o json | jq -r '.data | to_entries[] | "\(.key)"' | _inline_fzf_nh)
     kubectl view-secret -n "$ns" "$secret" "$key"
 }
 
@@ -305,4 +314,18 @@ khelp() {
     else
         grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
     fi
+}
+
+#### CUSTOM TOBI
+# [kdebug] start debugging container (nicolaka/netshoot) in the current namespace
+kdebug() {
+    kcmd 'bash' 'nicolaka/netshoot'
+}
+
+# [k8c-cluster] extracts kubeconfig of user cluster and connects it in a new bash
+k8c-cluster () {
+	TMP_KUBECONFIG=$(mktemp)
+	local cluster="$(kubectl get cluster | _inline_fzf | awk '{print $1}')"
+	kubectl get secret admin-kubeconfig -n cluster-$cluster -o go-template='{{ index .data "kubeconfig" }}' | base64 -d > $TMP_KUBECONFIG
+	KUBECONFIG=$TMP_KUBECONFIG $SHELL
 }
