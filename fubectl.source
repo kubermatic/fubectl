@@ -230,6 +230,16 @@ konsole() {
     "spec": {
         "hostPID": true,
         "hostNetwork": true,
+        "tolerations": [
+            {
+                "operator": "Exists",
+                "effect": "NoSchedule"
+            },
+            {
+                "operator": "Exists",
+                "effect": "NoExecute"
+            }
+        ],
         "containers": [
             {
                 "name": "'$name'",
@@ -258,14 +268,14 @@ konsole() {
     }
 }
 '
-    kubectl run $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
+    kubectl run $name --namespace "$ns" --rm -it --image alpine --overrides="${overrides}"
 }
 
 # [ksec] decode a value from a secret
 ksec () {
     ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
-    local key=$(kubectl get secret -n "$ns" "$secret" -o json | jq -r '.data | to_entries[] | "\(.key)"' | _inline_fzf_nh)       
+    local key=$(kubectl get secret -n "$ns" "$secret" -o json | jq -r '.data | to_entries[] | "\(.key)"' | _inline_fzf_nh)
     kubectl view-secret -n "$ns" "$secret" "$key"
 }
 
