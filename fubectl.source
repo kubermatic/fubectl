@@ -86,6 +86,22 @@ kget() {
     fi
 }
 
+# [kexp] as former `--export` field removes unwanted metadata - usage: COMMAND | kexp
+kexp(){
+  if [ -t 0 ]; then
+    echo "kexp has no piped input!"
+    echo "usage: COMMAND | kexp"
+  else
+    # remove not neat fields
+    kubectl neat
+  fi
+}
+
+# [kget-exp] get a resource by its YAML as former `--export` flag
+kget-exp() {
+    kget "$@" | kexp
+}
+
 # [ked] edit a resource by its YAML
 ked() {
     local kind="$1"
@@ -283,6 +299,7 @@ ksec () {
 kinstall() {
     kubectl krew install tree
     kubectl krew install view-secret
+    kubectl krew install neat
 }
 # [kupdate] Updates kubectl plugins
 kupdate() {
@@ -304,3 +321,4 @@ khelp() {
         grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
     fi
 }
+
