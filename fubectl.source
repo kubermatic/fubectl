@@ -92,13 +92,8 @@ kexp(){
     echo "kexp has no piped input!"
     echo "usage: COMMAND | kexp"
   else
-    yq d - 'metadata.resourceVersion' |
-    yq d - 'metadata.uid' |
-    yq d - 'metadata.creationTimestamp' |
-    yq d - 'metadata.selfLink' |
-    yq d - 'metadata.managedFields' |
-    yq d - 'metadata.annotations.kubectl*' |
-    yq d - 'status'
+    # remove not neat fields
+    kubectl neat
   fi
 }
 
@@ -241,11 +236,11 @@ ktree() {
     fi
 }
 
-# [konsole] create root shell (alpine) on a node
+# [konsole] create root shell on a node
 konsole() {
     local node_hostname="$(kubectl get node --label-columns=kubernetes.io/hostname | _inline_fzf | awk '{print $6}')"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
-    local name=konsole-$RANDOM
+    local name=shell-$RANDOM
     local overrides='
 {
     "spec": {
@@ -304,6 +299,7 @@ ksec () {
 kinstall() {
     kubectl krew install tree
     kubectl krew install view-secret
+    kubectl krew install neat
 }
 # [kupdate] Updates kubectl plugins
 kupdate() {
