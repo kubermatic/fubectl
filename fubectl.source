@@ -251,6 +251,16 @@ konsole() {
     "spec": {
         "hostPID": true,
         "hostNetwork": true,
+        "tolerations": [
+            {
+                "operator": "Exists",
+                "effect": "NoSchedule"
+            },
+            {
+                "operator": "Exists",
+                "effect": "NoExecute"
+            }
+        ],
         "containers": [
             {
                 "name": "'$name'",
@@ -279,7 +289,7 @@ konsole() {
     }
 }
 '
-    kubectl run $name --namespace $ns --rm -it --image alpine --overrides="${overrides}"
+    kubectl run $name --namespace "$ns" --rm -it --image alpine --overrides="${overrides}"
 }
 
 # [ksec] decode a value from a secret
