@@ -307,8 +307,8 @@ kupdate() {
 }
 
 #### Kubermatic KKP specific
-# [k8c-cluster] Kubermatic KKP - extracts kubeconfig of user cluster and connects it in a new bash
-k8c-cluster () {
+# [kkp-cluster] Kubermatic KKP - extracts kubeconfig of user cluster and connects it in a new bash
+kkp-cluster () {
 	TMP_KUBECONFIG=$(mktemp)
 	local cluster="$(kubectl get cluster | _inline_fzf | awk '{print $1}')"
 	kubectl get secret admin-kubeconfig -n cluster-$cluster -o go-template='{{ index .data "kubeconfig" }}' | base64 -d > $TMP_KUBECONFIG
