@@ -164,6 +164,14 @@ klog() {
     kubectl logs -n ${arg_pair} -c "${container_choosen}" --tail="${line_count}" "$@"
 }
 
+# [kkonfig] select a file in current directory and set it as $KUBECONFIG
+kkonfig() {
+    local kubeconfig
+    kubeconfig=$(_inline_fzf_nh) || return
+    export KUBECONFIG=$PWD/$kubeconfig
+    exec $SHELL
+}
+
 # [kex] execute command in container
 kex() {
     [ -z "$1" ] && printf "kex: missing argument(s).\nUsage: kex COMMAND [arguments]\n" && return 255
