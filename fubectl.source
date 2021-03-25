@@ -12,7 +12,7 @@ _isClusterSpaceObject() {
   # caller is responsible for assuring non-empty "$1"
   obj="$1"
   kubectl api-resources --namespaced=false \
-        | awk '(apiidx){print substr($0, 0, apiidx),substr($0, kindidx) } (!apiidx){ apiidx=index($0, " APIGROUP");kindidx=index($0, " KIND")}' \
+        | awk '(apiidx){print substr($0, 0, apiidx),substr($0, kindidx) } (!apiidx){ apiidx=index($0, " APIVERSION");kindidx=index($0, " KIND")}' \
     | grep -iq "\<${obj}\>"
 }
 # [k] like g for git but 233% as effective!
