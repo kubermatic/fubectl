@@ -5,8 +5,15 @@ then
 fi
 
 # helper functions
-alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
-alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
+if [ -z "$MSYSTEM" ]; then
+  alias _kctl_tty="kubectl"
+  alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
+  alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
+else # hack for Msys2 shell, where fzf doesn't support mintty
+  alias _kctl_tty="winpty kubectl"
+  alias _inline_fzf="fzf --multi --ansi -i -1 --reverse -0 --header-lines=1 --inline-info"
+  alias _inline_fzf_nh="fzf --multi --ansi -i -1 --reverse -0 --inline-info"
+fi
 
 _isClusterSpaceObject() {
   # caller is responsible for assuring non-empty "$1"
@@ -42,9 +49,9 @@ kwatch() {
     local kind="$1"
     [ -z "$kind" ] && printf "kwatch: missing argument.\nUsage: kwatch RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs watch kubectl get "${kind}"
+        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
     else
-        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs watch kubectl get "${kind}" -n
+        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r watch kubectl get "${kind}" -n
     fi
 }
 
@@ -80,9 +87,9 @@ kget() {
     local kind="$1"
     [ -z "$kind" ] && printf "kget: missing argument.\nUsage: kget RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl get -o yaml "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl get -o yaml "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl get -o yaml "$kind" -n
     fi
 }
 
@@ -161,7 +168,7 @@ klog() {
     [ -z "$arg_pair" ] && printf "klog: no pods found. no logs can be shown.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name} {.spec.initContainers[*].name}' -n | sed 's/ $//')
     local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
-    kubectl logs -n ${arg_pair} -c "${container_choosen}" --tail="${line_count}" "$@"
+    _kctl_tty logs -n ${arg_pair} -c "${container_choosen}" --tail="${line_count}" "$@"
 }
 
 # [kkonfig] select a file in current directory and set it as $KUBECONFIG
@@ -179,7 +186,7 @@ kex() {
     [ -z "$arg_pair" ] && printf "kex: no pods found. no execution.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
     local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
-    kubectl exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
+    _kctl_tty exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
 }
 
 # [kfor] port-forward a container port to your local machine
@@ -188,7 +195,7 @@ kfor() {
     [ -z "$port" ] && printf "kfor: missing argument.\nUsage: kfor PORT_TO_FORWARD\n" && return 255
     local arg_pair="$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')"
     [ -z "$arg_pair" ] && printf "kfor: no pods found. no forwarding.\n" && return
-    kubectl port-forward -n $arg_pair "$port"
+    _kctl_tty port-forward -n $arg_pair "$port"
 }
 
 # [ksearch] search for string in resources
@@ -238,9 +245,9 @@ ktree() {
         local kind="$(kubectl api-resources -o name | _inline_fzf | awk '{print $1}')"
     fi
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl tree "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl tree "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl tree "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl tree "$kind" -n
     fi
 }
 
