@@ -123,9 +123,9 @@ kdes() {
     local kind="$1"
     [ -z "$kind" ] && printf "kdes: missing argument.\nUsage: kdes RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl describe "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl describe "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl describe "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl describe "$kind" -n
     fi
 }
 
@@ -134,9 +134,9 @@ kdel() {
     local kind="$1"
     [ -z "$kind" ] && printf "kdel: missing argument.\nUsage: kdel RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -p kubectl delete "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r -p kubectl delete "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -p kubectl delete "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r -p kubectl delete "$kind" -n
     fi
 }
 
