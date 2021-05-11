@@ -42,9 +42,9 @@ kwatch() {
     local kind="$1"
     [ -z "$kind" ] && printf "kwatch: missing argument.\nUsage: kwatch RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs watch kubectl get "${kind}"
+        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
     else
-        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs watch kubectl get "${kind}" -n
+        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r watch kubectl get "${kind}" -n
     fi
 }
 
@@ -80,9 +80,9 @@ kget() {
     local kind="$1"
     [ -z "$kind" ] && printf "kget: missing argument.\nUsage: kget RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl get -o yaml "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl get -o yaml "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl get -o yaml "$kind" -n
     fi
 }
 
@@ -238,9 +238,9 @@ ktree() {
         local kind="$(kubectl api-resources -o name | _inline_fzf | awk '{print $1}')"
     fi
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs kubectl tree "$kind"
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl tree "$kind"
     else
-        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs kubectl tree "$kind" -n
+        kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl tree "$kind" -n
     fi
 }
 
