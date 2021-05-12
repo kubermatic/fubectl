@@ -6,21 +6,21 @@ fi
 
 # helper functions
 if [ -z "$MSYSTEM" ]; then
-  alias _kctl_tty="kubectl"
-  alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
-  alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
+    alias _kctl_tty="kubectl"
+    alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
+    alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
 else # hack for Msys2 shell, where fzf doesn't support mintty
-  alias _kctl_tty="winpty kubectl"
-  alias _inline_fzf="fzf --multi --ansi -i -1 --reverse -0 --header-lines=1 --inline-info"
-  alias _inline_fzf_nh="fzf --multi --ansi -i -1 --reverse -0 --inline-info"
+    alias _kctl_tty="winpty kubectl"
+    alias _inline_fzf="fzf --multi --ansi -i -1 --reverse -0 --header-lines=1 --inline-info"
+    alias _inline_fzf_nh="fzf --multi --ansi -i -1 --reverse -0 --inline-info"
 fi
 
 _isClusterSpaceObject() {
   # caller is responsible for assuring non-empty "$1"
-  obj="$1"
-  kubectl api-resources --namespaced=false \
-        | awk '(apiidx){print substr($0, 0, apiidx),substr($0, kindidx) } (!apiidx){ apiidx=index($0, " APIVERSION");kindidx=index($0, " KIND")}' \
-    | grep -iq "\<${obj}\>"
+    obj="$1"
+    kubectl api-resources --namespaced=false \
+      | awk '(apiidx){print substr($0, 0, apiidx),substr($0, kindidx) } (!apiidx){ apiidx=index($0, " APIVERSION");kindidx=index($0, " KIND")}' \
+      | grep -iq "\<${obj}\>"
 }
 # [k] like g for git but 233% as effective!
 alias k="kubectl"
@@ -94,13 +94,13 @@ kget() {
 
 # [kexp] as former `--export` field removes unwanted metadata - usage: COMMAND | kexp
 kexp(){
-  if [ -t 0 ]; then
-    echo "kexp has no piped input!"
-    echo "usage: COMMAND | kexp"
-  else
-    # remove not neat fields
-    kubectl neat
-  fi
+    if [ -t 0 ]; then
+        echo "kexp has no piped input!"
+        echo "usage: COMMAND | kexp"
+    else
+        # remove not neat fields
+        kubectl neat
+    fi
 }
 
 # [kget-exp] get a resource by its YAML as former `--export` flag
