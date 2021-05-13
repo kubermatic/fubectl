@@ -1,6 +1,5 @@
 #fix ZSH -  perform field splitting - http://zsh.sourceforge.net/Doc/Release/Options.html
-if [ -n "$ZSH_VERSION" ]
-then
+if [ -n "$ZSH_VERSION" ]; then
     setopt SH_WORD_SPLIT
 fi
 
@@ -22,19 +21,20 @@ _isClusterSpaceObject() {
       | awk '(apiidx){print substr($0, 0, apiidx),substr($0, kindidx) } (!apiidx){ apiidx=index($0, " APIVERSION");kindidx=index($0, " KIND")}' \
       | grep -iq "\<${obj}\>"
 }
+
 # [k] like g for git but 233% as effective!
 alias k="kubectl"
 
-# [kw] kw get po,svc,md
+# [kw] watch resources of any KIND in current namespace, usage: kw KIND[,KIND2,...]
 alias kw="watch kubectl get"
 
-# [ka] get all pods in the current namespace
+# [ka] get all pods from current namespace
 alias ka="kubectl get pods"
 
-# [kall] get all pods in cluster
+# [kall] get all pods from cluster
 alias kall="kubectl get pods --all-namespaces"
 
-# [kwa] watch all pods in the current namespace
+# [kwa] watch all pods in current namespace
 alias kwa="watch kubectl get pods"
 
 # [kwall] watch all pods in cluster
@@ -82,7 +82,17 @@ kube_ctx_namespace() {
     echo "$default_ns"
 }
 
-# [kget] get a resource, usage: kget [RES] - if RES is empty then pod is used
+# [kgt] get resource of KIND from current namespace, usage: kgt [KIND] - KIND is pod by default
+kgt() {
+    local kind="${1:-pod}"
+    if _isClusterSpaceObject "$kind" ; then
+        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
+    else
+        kubectl get "$kind" | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl get -o yaml "$kind" -n
+    fi
+}
+
+# [kget] get resource of KIND from cluster, usage: kget [KIND] - if KIND is empty then Pod
 kget() {
     local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
@@ -337,4 +347,3 @@ khelp() {
         grep -E '^# \[.+\]' "${BASH_SOURCE[0]}"
     fi
 }
-
