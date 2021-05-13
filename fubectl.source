@@ -28,7 +28,7 @@ alias k="kubectl"
 # [kw] kw get po,svc,md
 alias kw="watch kubectl get"
 
-# [ka] get all pods in namespace
+# [ka] get all pods in the current namespace
 alias ka="kubectl get pods"
 
 # [kall] get all pods in cluster
@@ -44,7 +44,7 @@ alias kwall="watch kubectl get pods --all-namespaces"
 # [kp] open kubernetes dashboard with proxy
 alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' & kubectl proxy"
 
-# [kwatch] watch resource
+# [kwatch] watch resource, usage: kwatch RESOURCE
 kwatch() {
     local kind="$1"
     [ -z "$kind" ] && printf "kwatch: missing argument.\nUsage: kwatch RESOURCE\n" && return 255
@@ -55,7 +55,7 @@ kwatch() {
     fi
 }
 
-# [kcmd] create a pod and execute a cmd/image (default bash/ubuntu) usage: "kcmd cmd" or "kcmd cmd image"
+# [kcmd] create a pod and execute a cmd/image (default bash/ubuntu), usage: "kcmd cmd" or "kcmd cmd image"
 kcmd() {
     local cmd="$1"
     local image="ubuntu"
@@ -82,10 +82,9 @@ kube_ctx_namespace() {
     echo "$default_ns"
 }
 
-# [kget] get a resource by its YAML
+# [kget] get a resource, usage: kget [RES] - if RES is empty then pod is used
 kget() {
-    local kind="$1"
-    [ -z "$kind" ] && printf "kget: missing argument.\nUsage: kget RESOURCE\n" && return 255
+    local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
         kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
     else
@@ -109,13 +108,9 @@ kget-exp() {
     kget "$@" | kexp
 }
 
-# [ked] edit a resource by its YAML
+# [ked] edit resource, usage: ked [RES] - if RES is empty then pod is used
 ked() {
-    local kind="$1"
-    if [ -z "$kind" ]; then
-      echo "ked requires resource-type (pod,deployment,...) as argument."
-      return 255
-    fi
+    local kind="${1:-pod}"
     local edit_args
     if _isClusterSpaceObject $kind ; then
         edit_args=( $(kubectl get "$kind" | _inline_fzf | awk '{print $1}') )
@@ -125,10 +120,9 @@ ked() {
     kubectl edit "$kind" ${edit_args[*]}
 }
 
-# [kdes] describe resource
+# [kdes] describe resource, usage: kdes [RES] - if RES is empty then pod is used
 kdes() {
-    local kind="$1"
-    [ -z "$kind" ] && printf "kdes: missing argument.\nUsage: kdes RESOURCE\n" && return 255
+    local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
         kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl describe "$kind"
     else
@@ -136,10 +130,9 @@ kdes() {
     fi
 }
 
-# [kdel] delete resource
+# [kdel] delete resource, usage: kdel [RES] - if RES is empty then pod is used
 kdel() {
-    local kind="$1"
-    [ -z "$kind" ] && printf "kdel: missing argument.\nUsage: kdel RESOURCE\n" && return 255
+    local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
         kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r -p kubectl delete "$kind"
     else
