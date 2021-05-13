@@ -5,7 +5,7 @@ then
 fi
 
 # helper functions
-if [ -z "$MSYSTEM" ]; then
+if [ -z "$FUBECTL_MSYS_HACK" ]; then
     alias _kctl_tty="kubectl"
     alias _inline_fzf="fzf --multi --ansi -i -1 --height=50% --reverse -0 --header-lines=1 --inline-info --border"
     alias _inline_fzf_nh="fzf --multi --ansi -i -1 --height=50% --reverse -0 --inline-info --border"
