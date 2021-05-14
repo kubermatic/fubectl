@@ -5,6 +5,7 @@ Because it's fancy-kubectl!
 * [fzf](https://github.com/junegunn/fzf)
 * [kubectl](https://github.com/kubernetes/kubernetes)
 * [kubectl tree](https://github.com/ahmetb/kubectl-tree)
+* [kubectl neat](https://github.com/itaysk/kubectl-neat) - only for kexp to work
 * [jq](https://stedolan.github.io/jq/)
 
 ## Installation
