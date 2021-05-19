@@ -44,10 +44,15 @@ alias kwall="watch kubectl get pods --all-namespaces"
 # [kp] open kubernetes dashboard with proxy
 alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/' & kubectl proxy"
 
-# [kwatch] watch resource, usage: kwatch RESOURCE
+# [kwatchn] watch a resource of KIND in current namespace, usage: kwatchn [KIND] - if KIND is empty then pod is used
+kwatchn() {
+    local kind="${1:-pod}"
+    kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
+}
+
+# [kwatch] watch a resource of KIND in cluster, usage: kwatch [KIND] - if KIND is empty then pod is used
 kwatch() {
-    local kind="$1"
-    [ -z "$kind" ] && printf "kwatch: missing argument.\nUsage: kwatch RESOURCE\n" && return 255
+    local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
         kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
     else
@@ -55,18 +60,15 @@ kwatch() {
     fi
 }
 
-# [kcmd] create a pod and execute a cmd/image (default bash/ubuntu), usage: "kcmd cmd" or "kcmd cmd image"
+# [kcmd] create a pod from IMAGE (ubuntu by default) and execute CMD (bash by default), usage: kcmd [CMD] [IMAGE]
 kcmd() {
     local cmd="$1"
-    local image="ubuntu"
-    if [ -n "$2" ]; then
-        image="$2"
-    fi
+    local image="${2:-ubuntu}"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     if [ -n "$cmd" ]; then
-        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/sh -c "${cmd}"
+        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/bash -c "${cmd}"
     else
-        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- bash
+        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/bash
     fi
 }
 
@@ -82,17 +84,13 @@ kube_ctx_namespace() {
     echo "$default_ns"
 }
 
-# [kgt] get resource of KIND from current namespace, usage: kgt [KIND] - KIND is pod by default
-kgt() {
+# [kgetn] get resource of KIND from current namespace, usage: kgetn [KIND] - if KIND is empty then pod is used
+kgetn() {
     local kind="${1:-pod}"
-    if _isClusterSpaceObject "$kind" ; then
-        kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
-    else
-        kubectl get "$kind" | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl get -o yaml "$kind" -n
-    fi
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl get -o yaml "$kind"
 }
 
-# [kget] get resource of KIND from cluster, usage: kget [KIND] - if KIND is empty then Pod
+# [kget] get resource of KIND from cluster, usage: kget [KIND] - if KIND is empty then pod is used
 kget() {
     local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
@@ -103,7 +101,7 @@ kget() {
 }
 
 # [kexp] as former `--export` field removes unwanted metadata - usage: COMMAND | kexp
-kexp(){
+kexp() {
     if [ -t 0 ]; then
         echo "kexp has no piped input!"
         echo "usage: COMMAND | kexp"
@@ -118,7 +116,13 @@ kget-exp() {
     kget "$@" | kexp
 }
 
-# [ked] edit resource, usage: ked [RES] - if RES is empty then pod is used
+# [kedn] edit resource of KIND from current namespace, usage: kedn [KIND] - if KIND is empty then pod is used
+kedn() {
+    local kind="${1:-pod}"
+    kubectl edit "${kind}" "$(kubectl get "${kind}" | _inline_fzf | awk '{print $1}')"
+}
+
+# [ked] edit resource of KIND from cluster, usage: ked [KIND] - if KIND is empty then pod is used
 ked() {
     local kind="${1:-pod}"
     local edit_args
@@ -130,7 +134,13 @@ ked() {
     kubectl edit "$kind" ${edit_args[*]}
 }
 
-# [kdes] describe resource, usage: kdes [RES] - if RES is empty then pod is used
+# [kdesn] describe resource of KIND in current namespace, usage: kdesn [KIND] - if KIND is empty then pod is used
+kdesn() {
+    local kind="${1:-pod}"
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl describe "$kind"
+}
+
+# [kdes] describe resource of KIND in cluster, usage: kdes [KIND] - if KIND is empty then pod is used
 kdes() {
     local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
@@ -140,7 +150,13 @@ kdes() {
     fi
 }
 
-# [kdel] delete resource, usage: kdel [RES] - if RES is empty then pod is used
+# [kdeln] delete resource of KIND in current namespace, usage: kdeln [KIND] - if KIND is empty then pod is used
+kdeln() {
+    local kind="${1:-pod}"
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r -p kubectl delete "$kind"
+}
+
+# [kdel] delete resource of KIND in cluster, usage: kdel [KIND] - if KIND is empty then pod is used
 kdel() {
     local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
@@ -182,9 +198,19 @@ kkonfig() {
     exec $SHELL
 }
 
-# [kex] execute command in container
+# [kexn] execute command in container from current namespace, usage: kexn CMD [ARGS]
+kexn() {
+    [ -z "$1" ] && printf "kexn: missing argument(s).\nUsage: kexn CMD [ARGS]\n" && return 255
+    local arg_pair=$(kubectl get po | _inline_fzf | awk '{print $1, $2}')
+    [ -z "$arg_pair" ] && printf "kex: no pods found. no execution.\n" && return
+    local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
+    local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
+    _kctl_tty exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
+}
+
+# [kex] execute command in container from cluster, usage: kex CMD [ARGS]
 kex() {
-    [ -z "$1" ] && printf "kex: missing argument(s).\nUsage: kex COMMAND [arguments]\n" && return 255
+    [ -z "$1" ] && printf "kex: missing argument(s).\nUsage: kex CMD [ARGS]\n" && return 255
     local arg_pair=$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')
     [ -z "$arg_pair" ] && printf "kex: no pods found. no execution.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
@@ -192,10 +218,19 @@ kex() {
     _kctl_tty exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
 }
 
-# [kfor] port-forward a container port to your local machine
+# [kforn] port-forward a container port from current namesapce, usage: kforn LOCAL_PORT:CONTAINER_PORT
+kforn() {
+    local port="$1"
+    [ -z "$port" ] && printf "kforn: missing argument.\nUsage: kforn LOCAL_PORT:CONTAINER_PORT\n" && return 255
+    local arg_pair="$(kubectl get po | _inline_fzf | awk '{print $1, $2}')"
+    [ -z "$arg_pair" ] && printf "kforn: no pods found. no forwarding.\n" && return
+    _kctl_tty port-forward -n $arg_pair "$port"
+}
+
+# [kfor] port-forward a container port from cluster, usage: kfor LOCAL_PORT:CONTAINER_PORT
 kfor() {
     local port="$1"
-    [ -z "$port" ] && printf "kfor: missing argument.\nUsage: kfor PORT_TO_FORWARD\n" && return 255
+    [ -z "$port" ] && printf "kfor: missing argument.\nUsage: kfor LOCAL_PORT:CONTAINER_PORT\n" && return 255
     local arg_pair="$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')"
     [ -z "$arg_pair" ] && printf "kfor: no pods found. no forwarding.\n" && return
     _kctl_tty port-forward -n $arg_pair "$port"
@@ -241,7 +276,16 @@ kwns() {
     watch kubectl get pod -n "$ns"
 }
 
-# [ktree] prints a tree of k8s objects (kubectl tree plugin needs to be installed)
+# [ktreen] prints a tree of k8s objects from current namespace, usage: ktreen [KIND]
+ktreen() {
+    local kind="$1"
+    if [ -z "$kind" ]; then
+        local kind="$(kubectl api-resources -o name | _inline_fzf | awk '{print $1}')"
+    fi
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl tree "$kind"
+}
+
+# [ktree] prints a tree of k8s objects from cluster, usage: ktree [KIND]
 ktree() {
     local kind="$1"
     if [ -z "$kind" ]; then
@@ -305,12 +349,19 @@ konsole() {
     kubectl run $name --namespace "$ns" --rm -it --image alpine --overrides="${overrides}"
 }
 
-# [ksec] decode a value from a secret
-ksec () {
-    ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
+# [ksecn] decode a value from a secret in current namespace, usage: ksecn
+ksecn() {
+    local secret=$(kubectl get secret | _inline_fzf | awk '{print $1}')
+    local key=$(kubectl get secret "${secret}" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
+    kubectl get secret "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
+}
+
+# [ksec] decode a value from a secret in cluster, usage: ksec
+ksec() {
+    local ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
     local key=$(kubectl get secret -n "$ns" "$secret" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
-    kubectl get secret -n "$ns" "$secret" -o go-template='{{ index .data "'$key'" | base64decode }}'
+    kubectl get secret -n "$ns" "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
 }
 
 # [kinstall] Install the required kubectl plugins
@@ -325,7 +376,7 @@ kupdate() {
 
 #### Kubermatic KKP specific
 # [kkp-cluster] Kubermatic KKP - extracts kubeconfig of user cluster and connects it in a new bash
-kkp-cluster () {
+kkp-cluster() {
     TMP_KUBECONFIG=$(mktemp)
     local cluster="$(kubectl get cluster | _inline_fzf | awk '{print $1}')"
     kubectl get secret admin-kubeconfig -n cluster-$cluster -o go-template='{{ index .data "kubeconfig" | base64decode }}' > $TMP_KUBECONFIG
