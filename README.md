@@ -6,6 +6,7 @@ Because it's fancy-kubectl!
 * [kubectl](https://github.com/kubernetes/kubernetes)
 * [kubectl tree](https://github.com/ahmetb/kubectl-tree)
 * [kubectl neat](https://github.com/itaysk/kubectl-neat) - only for kexp to work
+* [kubectl view-secret](https://github.com/elsesiy/kubectl-view-secret) - only for ksec command to work
 * [jq](https://stedolan.github.io/jq/)
 
 ## Installation
