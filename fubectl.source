@@ -201,11 +201,11 @@ kkonfig() {
 # [kexn] execute command in container from current namespace, usage: kexn CMD [ARGS]
 kexn() {
     [ -z "$1" ] && printf "kexn: missing argument(s).\nUsage: kexn CMD [ARGS]\n" && return 255
-    local arg_pair=$(kubectl get po | _inline_fzf | awk '{print $1, $2}')
-    [ -z "$arg_pair" ] && printf "kex: no pods found. no execution.\n" && return
+    local arg_pair=$(kubectl get po | _inline_fzf | awk '{print $1}')
+    [ -z "$arg_pair" ] && printf "kexn: no pods found. no execution.\n" && return
     local containers_out=$(echo "$arg_pair" | xargs kubectl get po -o=jsonpath='{.spec.containers[*].name}' -n)
     local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
-    _kctl_tty exec -it -n ${arg_pair} -c "${container_choosen}" -- "$@"
+    _kctl_tty exec -it ${arg_pair} -c "${container_choosen}" -- "$@"
 }
 
 # [kex] execute command in container from cluster, usage: kex CMD [ARGS]
@@ -222,9 +222,9 @@ kex() {
 kforn() {
     local port="$1"
     [ -z "$port" ] && printf "kforn: missing argument.\nUsage: kforn LOCAL_PORT:CONTAINER_PORT\n" && return 255
-    local arg_pair="$(kubectl get po | _inline_fzf | awk '{print $1, $2}')"
+    local arg_pair="$(kubectl get po | _inline_fzf | awk '{print $1}')"
     [ -z "$arg_pair" ] && printf "kforn: no pods found. no forwarding.\n" && return
-    _kctl_tty port-forward -n $arg_pair "$port"
+    _kctl_tty port-forward ${arg_pair} ${port}
 }
 
 # [kfor] port-forward a container port from cluster, usage: kfor LOCAL_PORT:CONTAINER_PORT
@@ -233,7 +233,7 @@ kfor() {
     [ -z "$port" ] && printf "kfor: missing argument.\nUsage: kfor LOCAL_PORT:CONTAINER_PORT\n" && return 255
     local arg_pair="$(kubectl get po --all-namespaces | _inline_fzf | awk '{print $1, $2}')"
     [ -z "$arg_pair" ] && printf "kfor: no pods found. no forwarding.\n" && return
-    _kctl_tty port-forward -n $arg_pair "$port"
+    _kctl_tty port-forward -n ${arg_pair} ${port}
 }
 
 # [ksearch] search for string in resources
