@@ -353,7 +353,7 @@ konsole() {
 ksecn() {
     local secret=$(kubectl get secret | _inline_fzf | awk '{print $1}')
     local key=$(kubectl get secret "${secret}" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
-    kubectl get secret "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
+    kubectl get secret "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}{{ "\n" }}'
 }
 
 # [ksec] decode a value from a secret in cluster, usage: ksec
@@ -361,7 +361,7 @@ ksec() {
     local ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
     local key=$(kubectl get secret -n "$ns" "$secret" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
-    kubectl get secret -n "$ns" "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
+    kubectl get secret -n "$ns" "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}{{ "\n" }}'
 }
 
 # [kinstall] Install the required kubectl plugins
