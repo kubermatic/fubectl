@@ -66,7 +66,7 @@ kcmd() {
     local image="${2:-ubuntu}"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     if [ -n "$cmd" ]; then
-        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/bash -c "${cmd}"
+        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/sh -c "${cmd}"
     else
         kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/bash
     fi
