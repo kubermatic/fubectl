@@ -175,7 +175,7 @@ Opens `localhost:8001/ui` in your browser and runs `kubectl proxy`
 ---
 
 ## Extra!
-Do you wan't to have the current kubecontext in your prompt?:
+Do you want to have the current kubecontext in your prompt?:
 ```bash
 export PS1="\[$(kube_ctx_name)\] $PS1"
 ```
