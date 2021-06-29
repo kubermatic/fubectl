@@ -166,15 +166,32 @@ kdel() {
     fi
 }
 
-# [klog] fetch log from container
 _klog_usage() {
   cat <<'EOF'
-Usage: klog [LINECOUNT] [options]
+Usage: klog[n] [LINECOUNT] [options]
 
 First argument is interpreted as LINECOUNT if it matches integer syntax.
 Additional `options` are passed on (see `kubectl logs --help` for details).
 EOF
 }
+
+# [klogn] fetch log from container in current namespace
+klogn() {
+    [ "$1" = "--help" ] && _klog_usage && return
+    local line_count=10
+    if [[ $1 =~ ^[-]{0,1}[0-9]+$ ]]; then
+        line_count="$1"
+        shift
+    fi
+
+    local pod=$(kubectl get po | _inline_fzf | awk '{print $1}')
+    [ -z "${pod}" ] && printf "klogn: no pods found. no logs can be shown.\n" && return
+    local containers_out=$(kubectl get po "${pod}" -o=jsonpath='{.spec.containers[*].name} {.spec.initContainers[*].name}' | sed 's/ $//')
+    local container_choosen=$(echo "$containers_out" |  tr ' ' "\n" | _inline_fzf_nh)
+    _kctl_tty logs "${pod}" -c "${container_choosen}" --tail="${line_count}" "$@"
+}
+
+# [klog] fetch log from container in the cluster
 klog() {
     [ "$1" = "--help" ] && _klog_usage && return
     local line_count=10
