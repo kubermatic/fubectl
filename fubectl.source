@@ -239,26 +239,20 @@ gssh() {
     if [[ ! -z "$1" ]]; then
         case "$1" in
          cb|build|common-build)
-             PROJECT="common-build"
+             PROJECT=$BUILD_PROJECT
              ;;
          pg|play|playground)
-             PROJECT="strong-keyword-184513"
+             PROJECT=$TEST_PROJECT
              ;;
          prod|platform-prod|production)
-             PROJECT="platform-prod-399563"
+             PROJECT=$PROD_PROJECT
              ;;
          dev|platform-dev|develop)
-             PROJECT="platform-dev-788014"
-             ;;
-         bh-dev|binderhub-dev)
-             PROJECT="binderhub-dev"
-             ;;
-         bh-prod|binderhub-prod)
-             PROJECT="binderhub-prod"
+             PROJECT=$DEV_PROJECT
              ;;
         esac
     else
-        PROJECT=$(gcloud projects  list --format=json | jq -r '.[].projectId' | _inline_fzf)
+        PROJECT=$(gcloud projects list --format=json | jq -r '.[].projectId' | _inline_fzf)
     fi
     echo "PROJECT IS:  $PROJECT"
     ssh $(gcloud compute instances  list --project $PROJECT | _inline_fzf | awk '{print $4}')
