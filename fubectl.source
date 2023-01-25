@@ -403,6 +403,18 @@ function krrsn() {
     kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl rollout restart "$kind"
 }
 
+# [krst] status of resource of KIND, usage: krst [KIND] - if KIND is empty then deployment is used
+function krst() {
+    local kind="${1:-deploy}"
+    kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl rollout status "$kind" -n
+}
+
+# [krstn] status resource of KIND in current namespace, usage: krstn [KIND] - if KIND is empty then deployment is used
+function krstn() {
+    local kind="${1:-deploy}"
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl rollout status "$kind"
+}
+
 #### Kubermatic KKP specific
 # [kkp-cluster] Kubermatic KKP - extracts kubeconfig of user cluster and connects it in a new bash
 function kkp-cluster() {
