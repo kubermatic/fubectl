@@ -391,6 +391,18 @@ function kupdate() {
     kubectl krew upgrade
 }
 
+# [krrs] restart resource of KIND, usage: krrs [KIND] - if KIND is empty then deployment is used
+function krrs() {
+    local kind="${1:-deploy}"
+    kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl rollout restart "$kind" -n
+}
+
+# [krrsn] restart resource of KIND in current namespace, usage: krrsn [KIND] - if KIND is empty then deployment is used
+function krrsn() {
+    local kind="${1:-deploy}"
+    kubectl get "$kind" | _inline_fzf | awk '{print $1}' | xargs -r kubectl rollout restart "$kind"
+}
+
 #### Kubermatic KKP specific
 # [kkp-cluster] Kubermatic KKP - extracts kubeconfig of user cluster and connects it in a new bash
 function kkp-cluster() {
