@@ -1,5 +1,5 @@
 # fubectl
-Because it's fancy-kubectl!
+Because it's fancy-kubectl !
 
 ## Prerequisites?
 * [fzf](https://github.com/junegunn/fzf)
@@ -185,6 +185,11 @@ for the current namespace (this is currently slow, because it calls kubectl ever
 export PS1="\[$(kube_ctx_namespace)\] $PS1"
 ```
 
+## Customization
+
+`fubectl` can be customized via following environment variables
+
+* `FUBECTL_WATCH_CMD` - alterative `watch` command, e.g. [viddy](https://github.com/sachaos/viddy)
 
 ## Troubleshooting
 

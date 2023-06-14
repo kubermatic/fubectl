@@ -26,7 +26,7 @@ function _isClusterSpaceObject() {
 alias k="kubectl"
 
 # [kw] watch resources of any KIND in current namespace, usage: kw KIND[,KIND2,...]
-alias kw="watch kubectl get"
+alias kw="${FUBECTL_WATCH_CMD:-watch} kubectl get"
 
 # [ka] get all pods from current namespace
 alias ka="kubectl get pods"
@@ -35,10 +35,10 @@ alias ka="kubectl get pods"
 alias kall="kubectl get pods --all-namespaces"
 
 # [kwa] watch all pods in current namespace
-alias kwa="watch kubectl get pods"
+alias kwa="${FUBECTL_WATCH_CMD:-watch} kubectl get pods"
 
 # [kwall] watch all pods in cluster
-alias kwall="watch kubectl get pods --all-namespaces"
+alias kwall="${FUBECTL_WATCH_CMD:-watch} kubectl get pods --all-namespaces"
 
 # TODO use "open" instead of "xdg-open" on a mac - also redirect xdg-open std{out,err} to /dev/null
 # [kp] open kubernetes dashboard with proxy
@@ -47,16 +47,16 @@ alias kp="xdg-open 'http://localhost:8001/api/v1/namespaces/kube-system/services
 # [kwatchn] watch a resource of KIND in current namespace, usage: kwatchn [KIND] - if KIND is empty then pod is used
 function kwatchn() {
     local kind="${1:-pod}"
-    kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
+    kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r ${FUBECTL_WATCH_CMD:-watch} kubectl get "${kind}"
 }
 
 # [kwatch] watch a resource of KIND in cluster, usage: kwatch [KIND] - if KIND is empty then pod is used
 function kwatch() {
     local kind="${1:-pod}"
     if _isClusterSpaceObject "$kind" ; then
-        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r watch kubectl get "${kind}"
+        kubectl get "${kind}" | _inline_fzf | awk '{print $1}' | xargs -r ${FUBECTL_WATCH_CMD:-watch} kubectl get "${kind}"
     else
-        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r watch kubectl get "${kind}" -n
+        kubectl get "${kind}" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r ${FUBECTL_WATCH_CMD:-watch} kubectl get "${kind}" -n
     fi
 }
 
@@ -290,7 +290,7 @@ function kcns() {
 function kwns() {
     local ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
     [ -z "$ns" ] && printf "kcns: no namespace selected/found.\nUsage: kwns\n" && return
-    watch kubectl get pod -n "$ns"
+    ${FUBECTL_WATCH_CMD:-watch} kubectl get pod -n "$ns"
 }
 
 # [ktreen] prints a tree of k8s objects from current namespace, usage: ktreen [KIND]
