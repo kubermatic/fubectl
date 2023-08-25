@@ -259,8 +259,7 @@ function ksearch() {
     [ -z "$search_query" ] && printf "ksearch: missing argument.\nUsage: ksearch SEARCH_QUERY\n" && return 255
     search_query="$1"
     for ns in $(kubectl get ns -o=json | jq -r '.items[].metadata.name'); do
-        kubeItems=$(kubectl  --namespace="${ns}" get svc,pods -o=json | jq -r 'del(.metadata.resourceVersion,.metadata.uid,.metadata.selfLink,.metadata.creationTimestamp,.metadata.annotations,.metadata.generation,.metadata.ownerReferences,.status)')
-        items=$(echo "$kubeItems" | jq '.items ' | jq -c .)
+        kubeItems=$(kubectl  --namespace="${ns}" get deployment,ingress,daemonset,secrets,configmap,service,serviceaccount,statefulsets,pod,endpoints,customresourcedefinition,events,networkpolicies,persistentvolumeclaims,persistentvolumes,replicasets,replicationcontrollers,statefulsets,storageclasses -o=json | jq -r 'del(.metadata.resourceVersion,.metadata.uid,.metadata.selfLink,.metadata.creationTimestamp,.metadata.annotations,.metadata.generation,.metadata.ownerReferences,.status)')
         item_count=$(echo "$kubeItems" | jq '.items | length')
         for ((i = 0; i < item_count; i++)); do 
             item=$(echo "$kubeItems" | jq -r ".items[$i]" | jq -c .)
