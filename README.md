@@ -190,6 +190,7 @@ export PS1="\[$(kube_ctx_namespace)\] $PS1"
 `fubectl` can be customized via following environment variables
 
 * `FUBECTL_WATCH_CMD` - alterative `watch` command, e.g. [viddy](https://github.com/sachaos/viddy)
+* `FUBECTL_NO_KCL` - disable `kcl` alias, since it may conflict with [KCL language CLI](https://www.kcl-lang.io/)
 
 ## Troubleshooting
 
