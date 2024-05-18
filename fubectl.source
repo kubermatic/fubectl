@@ -269,7 +269,7 @@ function ksearch() {
 }
 
 # [kcl] context list
-alias kcl='kubectl config get-contexts'
+[ -z "${FUBECTL_NO_KCL}" ] && alias kcl='kubectl config get-contexts'
 
 # [kcs] context set
 function kcs() {
