@@ -24,6 +24,7 @@ function _isClusterSpaceObject() {
 
 # [k] like g for git but 233% as effective!
 alias k="kubectl"
+complete -o default -F __start_kubectl k
 
 # [kw] watch resources of any KIND in current namespace, usage: kw KIND[,KIND2,...]
 alias kw="${FUBECTL_WATCH_CMD:-watch} kubectl get"
