@@ -316,6 +316,18 @@ function ktree() {
     fi
 }
 
+# [kssh] select the external node IP to connect to the node via SSH. If external IP is not set, internal IP is used.
+function kssh() {
+    local user=${1:-root}
+    local node_name="$(kubectl get node -o wide | _inline_fzf | awk '{print $1}')"
+    local node_ext_ip="$(kubectl get node -o wide --no-headers $node_name | awk '{print $7}')"
+    if [[ "$node_ext_ip" == "<none>" ]]; then
+      local node_ext_ip="$(kubectl get node -o wide --no-headers $node_name  | awk '{print $6}')"
+    fi
+    echo "ssh $user@$node_ext_ip"
+    ssh $user@$node_ext_ip
+}
+
 # [konsole] create root shell on a node
 function konsole() {
     local node_hostname="$(kubectl get node --label-columns=kubernetes.io/hostname | _inline_fzf | awk '{print $6}')"
