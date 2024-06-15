@@ -422,6 +422,7 @@ function kkp-cluster() {
     TMP_KUBECONFIG=$(mktemp)
     local cluster="$(kubectl get cluster | _inline_fzf | awk '{print $1}')"
     kubectl get secret admin-kubeconfig -n cluster-$cluster -o go-template='{{ index .data "kubeconfig" | base64decode }}' > $TMP_KUBECONFIG
+    kubectl --kubeconfig $TMP_KUBECONFIG config rename-context default cluster-$cluster
     KUBECONFIG=$TMP_KUBECONFIG $SHELL
 }
 
