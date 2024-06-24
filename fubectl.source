@@ -22,9 +22,64 @@ function _isClusterSpaceObject() {
       | grep -iq "\<${obj}\>"
 }
 
+function completion_wrapper() {
+    local RARG='-a'
+    [[ -n "$ZSH_VERSION" ]] && RARG='-A'
+    # ex: completion_wrapper kgns 'get ns'
+    [[ "$#" == 2 ]] || return 1
+    local alias_name="$1"
+    local alias_args="$2"
+    eval "local alias_arg_words; alias_arg_words=($alias_args)" 2>/dev/null || return
+    read $RARG alias_arg_words <<< "$alias_args"
+
+    local compl_func="__start_kubectl"
+
+    local wrapper_name="alias_completion::${alias_name}"
+    eval "
+    function ${wrapper_name}() {
+      (( COMP_CWORD += ${#alias_arg_words[@]} ))
+      COMP_WORDS=(kubectl $alias_args \${COMP_WORDS[@]:1})
+      (( COMP_POINT -= \${#COMP_LINE} ))
+      COMP_LINE=\${COMP_LINE/$alias_name/kubectl $alias_args}
+      (( COMP_POINT += \${#COMP_LINE} ))
+      $compl_func
+      }
+    "
+    eval "complete -o default -F $wrapper_name $alias_name"
+}
+
 # [k] like g for git but 233% as effective!
-alias k="kubectl"
-complete -o default -F __start_kubectl k
+alias k="kubectl"; complete -o default -F __start_kubectl k
+
+# [kg] kubectl get
+alias kg='k get'; completion_wrapper kg 'get'
+
+# [kgp] kubectl get pods
+alias kgp='k get po'; completion_wrapper kgp 'get po'
+
+# [kgd] kubectl get deployments
+alias kgd='k get deploy'; completion_wrapper kgd 'get deploy'
+
+# [kgs] kubectl get services
+alias kgs='k get svc'; completion_wrapper kgs 'get svc'
+
+# [kgsa] kubectl get serviceaccounts
+alias kgsa='k get sa'; completion_wrapper kgsa 'get sa'
+
+# [kd] kubectl describe
+alias kd='k describe'; completion_wrapper kd 'describe'
+
+# [kd] kubectl describe pods
+alias kdp='k describe po'; completion_wrapper kdp 'describe po'
+
+# [kd] kubectl describe deployments
+alias kdd='k describe deploy'; completion_wrapper kdd 'describe deploy'
+
+# [kd] kubectl describe services
+alias kds='k describe svc'; completion_wrapper kds 'describe svc'
+
+# [kd] kubectl describe serviceaccounts
+alias kdsa='k describe sa'; completion_wrapper kdsa 'describe sa'
 
 # [kw] watch resources of any KIND in current namespace, usage: kw KIND[,KIND2,...]
 alias kw="${FUBECTL_WATCH_CMD:-watch} kubectl get"
