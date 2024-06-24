@@ -67,9 +67,9 @@ function kcmd() {
     local image="${2:-ubuntu}"
     local ns="$(kubectl get ns | _inline_fzf | awk '{print $1}')"
     if [ -n "$cmd" ]; then
-        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/sh -c "${cmd}"
+        kubectl run shell-$RANDOM --pod-running-timeout 600s --namespace $ns --rm -i --tty --image ${image} -- /bin/sh -c "${cmd}"
     else
-        kubectl run shell-$RANDOM --namespace $ns --rm -i --tty --image ${image} -- /bin/bash
+        kubectl run shell-$RANDOM --pod-running-timeout 600s --namespace $ns --rm -i --tty --image ${image} -- /bin/bash
     fi
 }
 
@@ -314,6 +314,18 @@ function ktree() {
     else
         kubectl get "$kind" --all-namespaces | _inline_fzf | awk '{print $1, $2}' | xargs -r kubectl tree "$kind" -n
     fi
+}
+
+# [kssh] select the external node IP to connect to the node via SSH. If external IP is not set, internal IP is used.
+function kssh() {
+    local user=${1:-root}
+    local node_name="$(kubectl get node -o wide | _inline_fzf | awk '{print $1}')"
+    local node_ext_ip="$(kubectl get node -o wide --no-headers $node_name | awk '{print $7}')"
+    if [[ "$node_ext_ip" == "<none>" ]]; then
+      local node_ext_ip="$(kubectl get node -o wide --no-headers $node_name  | awk '{print $6}')"
+    fi
+    echo "ssh $user@$node_ext_ip"
+    ssh $user@$node_ext_ip
 }
 
 # [konsole] create root shell on a node
