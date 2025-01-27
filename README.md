@@ -30,7 +30,7 @@ choice.
 
 ### `k` – alias for kubectl
 
-Like g for git but 133% more effective!
+Like g for git but 233% more effective!
 
 Examples:
  - `k get nodes`
