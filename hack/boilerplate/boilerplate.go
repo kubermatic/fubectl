@@ -1,5 +1,5 @@
 /*
-Copyright YEAR The XXX Authors.
+Copyright 2025 The Kubermatic fubectl Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -92,8 +92,7 @@ var (
 
 	// list all the files contain 'DO NOT EDIT', but are not generated
 	skippedUngeneratedFiles = map[string]struct{}{
-		"hack/boilerplate/boilerplate.py": struct{}{},
-		"hack/lib/swagger.sh":             struct{}{},
+		"hack/boilerplate/boilerplate.go": struct{}{},
 	}
 )
 
