@@ -20,7 +20,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -70,40 +69,24 @@ const (
 var (
 	// skipped files and directories
 	skipped = map[string]struct{}{
-		"bin":                           struct{}{},
-		"Godeps":                        struct{}{},
-		".git":                          struct{}{},
-		"vendor":                        struct{}{},
-		"_gopath":                       struct{}{},
-		"_output":                       struct{}{},
-		"cluster/env.sh":                struct{}{},
-		"test/e2e/generated/bindata.go": struct{}{},
-		"staging/src/k8s.io/kubectl/pkg/generated/bindata.go": struct{}{},
-		"hack/boilerplate/test":                               struct{}{},
-		"pkg/apis/kubeadm/v1beta1/bootstraptokenstring.go":    struct{}{},
-		"pkg/apis/kubeadm/v1beta1/types.go":                   struct{}{},
-		"pkg/apis/kubeadm/v1beta1/zz_generated.deepcopy.go":   struct{}{},
-		// third_party folders
-		"third_party": struct{}{},
-		"staging/src/k8s.io/apimachinery/third_party":   struct{}{},
-		"staging/src/k8s.io/client-go/third_party":      struct{}{},
-		"staging/src/k8s.io/code-generator/third_party": struct{}{},
+		".git":                  {},
+		"hack/boilerplate/test": {},
 	}
 
 	// list all the files contain 'DO NOT EDIT', but are not generated
 	skippedUngeneratedFiles = map[string]struct{}{
-		"hack/boilerplate/boilerplate.go": struct{}{},
+		"hack/boilerplate/boilerplate.go": {},
 	}
 )
 
 func main() {
-	flag.StringVar(&boilerplateDir, "boilerplate-dir", "./hack/boilerplate", "Directory containing the boilerplate files for file extensions.")
+	flag.StringVar(&boilerplateDir, "boilerplate-dir", "./hack/boilerplate", "directory containing the boilerplate files for file extensions.")
 	flag.BoolVar(&verbose, "verbose", false, "give verbose output regarding why a file does not pass.")
 	flag.Parse()
 
 	failed, err := run(os.Stdout, rootDir)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error()+"\n")
+		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
 	}
 	if failed {
@@ -116,14 +99,14 @@ func main() {
 func run(out io.Writer, rootDir string) (failed bool, err error) {
 	boilerplateMap, err := getBoilerplateForExtensions()
 	if err != nil {
-		return false, fmt.Errorf("getting boilerplate files: %v", err)
+		return false, fmt.Errorf("getting boilerplate files: %w", err)
 	}
 
 	files := flag.Args()
 	if len(files) == 0 {
 		files, err = getFiles(rootDir, boilerplateMap)
 		if err != nil {
-			return false, fmt.Errorf("getting files to check: %v", err)
+			return false, fmt.Errorf("getting files to check: %w", err)
 		}
 	}
 
@@ -131,7 +114,7 @@ func run(out io.Writer, rootDir string) (failed bool, err error) {
 	for _, file := range files {
 		ok, err := filePasses(file, boilerplateMap, out)
 		if err != nil {
-			return false, fmt.Errorf("checking file: %v", err)
+			return false, fmt.Errorf("checking file: %w", err)
 		}
 		if !ok {
 			failedFiles = append(failedFiles, file)
@@ -191,9 +174,9 @@ func isGenerated(filename string, content []byte) bool {
 }
 
 func filePasses(filename string, boilerplateMap map[string]string, out io.Writer) (bool, error) {
-	fileContent, err := ioutil.ReadFile(filename)
+	fileContent, err := os.ReadFile(filename)
 	if err != nil {
-		return false, fmt.Errorf("opening file: %v", err)
+		return false, fmt.Errorf("opening file: %w", err)
 	}
 
 	// determine if the file is automatically generated
@@ -277,7 +260,7 @@ func fileExtension(filename string) string {
 		return ""
 	}
 
-	return base[i+1 : len(base)]
+	return base[i+1:]
 }
 
 // getBoilerplateForExtensions reads the boilerplate.*.txt files in the directory
@@ -287,7 +270,7 @@ func getBoilerplateForExtensions() (map[string]string, error) {
 
 	matches, err := filepath.Glob(path.Join(boilerplateDir, "boilerplate.*.txt"))
 	if err != nil {
-		return nil, fmt.Errorf("finding files via glob: %v", err)
+		return nil, fmt.Errorf("finding files via glob: %w", err)
 	}
 	for _, match := range matches {
 		parts := strings.Split(path.Base(match), ".")
@@ -295,9 +278,9 @@ func getBoilerplateForExtensions() (map[string]string, error) {
 			return nil, fmt.Errorf("wrong filename for boilerplate file: %q should be \"boilerplate.EXTENSION.txt\"", match)
 		}
 
-		content, err := ioutil.ReadFile(match)
+		content, err := os.ReadFile(match)
 		if err != nil {
-			return nil, fmt.Errorf("reading file: %v", err)
+			return nil, fmt.Errorf("reading file: %w", err)
 		}
 
 		// map file extension to the boilerplate for the file
