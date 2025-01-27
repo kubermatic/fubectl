@@ -10,12 +10,12 @@ Because it's fancy-kubectl !
 
 ## Installation
 
-You can directly download the [`fubectl.source`](https://rawgit.com/kubermatic/fubectl/master/fubectl.source)
+You can directly download the [`fubectl.source`](https://rawgit.com/kubermatic/fubectl/main/fubectl.source)
 and save it in some directory.
 
 Download:
 ```bash
-curl -LO https://rawgit.com/kubermatic/fubectl/master/fubectl.source
+curl -LO https://rawgit.com/kubermatic/fubectl/main/fubectl.source
 ```
 
 then add to your .bashrc/.zshrc file:
@@ -28,7 +28,7 @@ choice.
 
 ## What can it do?
 
-### k - alias for kubectl
+### `k` – alias for kubectl
 
 Like g for git but 133% more effective!
 
@@ -42,8 +42,7 @@ Usage:
 
 ---
 
-### kw - alias for 'watch kubectl'
-
+### `kw` – alias for 'watch kubectl'
 
 Examples:
  - `kw nodes`
@@ -52,7 +51,7 @@ Examples:
 
 ---
 
-### kall - All pods in all namespaces
+### `kall` – All pods in all namespaces
 
 Get all pods
 
@@ -61,7 +60,7 @@ Usage:
 
 ---
 
-### kwall - Watch all pods in all namespaces
+### `kwall` – Watch all pods in all namespaces
 
 Watch all pods in all namespaces every 2 seconds.
 
@@ -70,7 +69,7 @@ Usage:
 
 ---
 
-### kdes - Describe a resource
+### `kdes` – Describe a resource
 
 Examples:
 - `kdes pod`
@@ -82,7 +81,7 @@ Usage:
 
 ---
 
-### kdel - Delete a resource
+### `kdel` – Delete a resource
 
 Examples:
 - `kdel pod`
@@ -94,7 +93,7 @@ Usage:
 
 ---
 
-### klog - Print the logs for a container in a pod
+### `klog` – Print the logs for a container in a pod
 
 Examples:
 - `klog` - Print the last 10 lines
@@ -107,7 +106,7 @@ Usage:
 
 ---
 
-### kex - Execute a command in a container
+### `kex` – Execute a command in a container
 
 Examples:
 - `kex bash` - Start a bash in a container
@@ -118,7 +117,7 @@ Usage:
 
 ---
 
-### kfor - Forward one or more local ports to a pod
+### `kfor` – Forward one or more local ports to a pod
 
 Examples:
 - `kfor 8000` - Forwards port 8000 to a pod
@@ -129,7 +128,7 @@ Usage:
 
 ---
 
-### ksearch - Search for string in resources
+### `ksearch` – Search for string in resources
 
 Examples:
 - `// TODO`
@@ -139,20 +138,23 @@ Usage:
 
 ---
 
-### kcl - Displays one or many contexts from the kubeconfig file
+### `kcl` – Displays one or many contexts from the kubeconfig file
+
 Context list
 
 Usage:
 ![kGif](./demo_src/kcl.gif)
+
 ---
-### kcs - Sets the current context
+
+### `kcs` – Sets the current context
 
 Usage:
 ![kGif](./demo_src/kcs.gif)
 
 ---
 
-### kcns - Switch the default namespace
+### `kcns` – Switch the default namespace
 
 `kcns` - Set the current default namespace from list
 `kcns kube-system` - Set kube-system as default namespace immediately
@@ -161,20 +163,21 @@ Usage:
 ![kGif](./demo_src/kcns.gif)
 ---
 
-### kdebug - Start a debugging Pod in a Cluster
+### `kdebug` – Start a debugging Pod in a Cluster
 
 Usage:
 ![kGif](./demo_src/kdebug.gif)
 
 ---
 
-### kp - Open the Kubernetes dashboard
+### `kp` – Open the Kubernetes dashboard
 
 Opens `localhost:8001/ui` in your browser and runs `kubectl proxy`
 
 ---
 
 ## Extra!
+
 Do you want to have the current kubecontext in your prompt?:
 ```bash
 export PS1="\[$(kube_ctx_name)\] $PS1"
@@ -189,8 +192,8 @@ export PS1="\[$(kube_ctx_namespace)\] $PS1"
 
 `fubectl` can be customized via following environment variables
 
-* `FUBECTL_WATCH_CMD` - alterative `watch` command, e.g. [viddy](https://github.com/sachaos/viddy)
-* `FUBECTL_NO_KCL` - disable `kcl` alias, since it may conflict with [KCL language CLI](https://www.kcl-lang.io/)
+* `FUBECTL_WATCH_CMD` – alterative `watch` command, e.g. [viddy](https://github.com/sachaos/viddy)
+* `FUBECTL_NO_KCL` – disable `kcl` alias, since it may conflict with [KCL language CLI](https://www.kcl-lang.io/)
 
 ## Troubleshooting
 
@@ -212,8 +215,8 @@ Feedback and discussion are available on [Kubermatic Slack][15].
 * We welcome pull requests. Feel free to dig through the [issues][1] and jump in.
 
 [1]: https://github.com/kubermatic/fubectl/issues
-[2]: https://github.com/kubermatic/fubectl/blob/master/CONTRIBUTING.md
-[4]: https://github.com/kubermatic/fubectl/blob/master/CODE_OF_CONDUCT.md
+[2]: https://github.com/kubermatic/fubectl/blob/main/CONTRIBUTING.md
+[4]: https://github.com/kubermatic/fubectl/blob/main/code-of-conduct.md
 
 [12]: https://kubermatic.slack.com/messages/fubectl
 [15]: http://slack.kubermatic.io/
