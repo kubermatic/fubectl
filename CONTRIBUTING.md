@@ -1,7 +1,7 @@
 # How to Contribute
 
-Loodse projects are [Apache 2.0 licensed](LICENSE) and accept contributions via
-GitHub pull requests. This document outlines some of the conventions on
+Kubermatic projects are [Apache 2.0 licensed](LICENSE) and accept contributions
+via GitHub pull requests. This document outlines some of the conventions on
 development workflow, commit message formatting, contact points and other
 resources to make it easier to get your contribution accepted.
 
@@ -12,7 +12,8 @@ Origin (DCO). This document was created by the Linux Kernel community and is a
 simple statement that you, as a contributor, have the legal right to make the
 contribution. See the [DCO](DCO) file for details.
 
-Any copyright notices in this repo should specify the authors as "the Loodse XXX project contributors".
+Any copyright notices in this repo should specify the authors as "The Kubermatic
+fubectl Authors".
 
 To sign your work, just add a line like this at the end of your commit message:
 
@@ -22,26 +23,30 @@ Signed-off-by: Joe Example <joe@example.com>
 
 This can easily be done with the `--signoff` option to `git commit`.
 
-Note that we're requiring all commits in a PR to be signed-off. If you already created a PR, you can sign-off all existing commits by rebasing with the `--signoff` flag.
+Note that we're requiring all commits in a PR to be signed-off. If you already
+created a PR, you can sign-off all existing commits by rebasing with the
+`--signoff` flag.
 
 ```
 git rebase --signoff origin/master
 ```
 
-By doing this you state that you can certify the following (from https://developercertificate.org/):
+By doing this you state that you can certify the following
+(from https://developercertificate.org/):
 
-## Email and Chat
+## Chat
 
-The XXX project currently uses the general Loodse email list and Slack channel:
-- Email: [loodse-dev](https://groups.google.com/forum/#!forum/loodse-dev)
+The fubectl project currently uses the general Kubermatic Slack channel:
+
 - Slack: #[Slack](http://slack.kubermatic.io/) on Slack
-
-Please avoid emailing maintainers found in the MAINTAINERS file directly. They
-are very busy and read the mailing lists.
 
 ## Reporting a security vulnerability
 
-Due to their public nature, GitHub and mailing lists are not appropriate places for reporting vulnerabilities. If you suspect you have found a security vulnerability, please do not file a GitHub issue, but instead email security@loodse.com with the full details, including steps to reproduce the issue.
+Due to their public nature, GitHub and mailing lists are not appropriate places
+for reporting vulnerabilities. If you suspect you have found a security
+vulnerability, please do not file a GitHub issue, but instead email
+security@kubermatic.com with the full details, including steps to reproduce the
+issue.
 
 ## Getting Started
 
