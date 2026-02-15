@@ -10,12 +10,12 @@ Because it's fancy-kubectl !
 
 ## Installation
 
-You can directly download the [`fubectl.source`](https://rawgit.com/kubermatic/fubectl/main/fubectl.source)
+You can directly download the [`fubectl.source`](https://raw.githubusercontent.com/kubermatic/fubectl/refs/heads/main/fubectl.source)
 and save it in some directory.
 
 Download:
 ```bash
-curl -LO https://rawgit.com/kubermatic/fubectl/main/fubectl.source
+curl -LO https://raw.githubusercontent.com/kubermatic/fubectl/refs/heads/main/fubectl.source
 ```
 
 then add to your .bashrc/.zshrc file:
