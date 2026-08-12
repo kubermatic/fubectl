@@ -379,19 +379,46 @@ function konsole() {
     kubectl run $name --namespace "$ns" --rm -it --image alpine --overrides="${overrides}"
 }
 
-# [ksecn] decode a value from a secret in current namespace, usage: ksecn
+# [ksecn] decode a value from a secret in current namespace, usage: ksecn [SECRET]
 function ksecn() {
-    local secret=$(kubectl get secret | _inline_fzf | awk '{print $1}')
-    local key=$(kubectl get secret "${secret}" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
+    local secret="$1"
+    if [ -z "${secret}" ]; then
+        secret=$(kubectl get secret | _inline_fzf | awk '{print $1}')
+    fi
+    [ -z "${secret}" ] && return
+    local key=$(kubectl get secret "${secret}" \
+        -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
+    [ -z "${key}" ] && return
     kubectl get secret "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
 }
 
 # [ksec] decode a value from a secret in cluster, usage: ksec
 function ksec() {
-    local ns=$(kubectl get ns | _inline_fzf | awk '{print $1}')
-    local secret=$(kubectl get secret -n "$ns" | _inline_fzf | awk '{print $1}')
-    local key=$(kubectl get secret -n "$ns" "$secret" -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
-    kubectl get secret -n "$ns" "${secret}" -o go-template='{{ index .data "'$key'" | base64decode }}'
+    local arg_pair=$(kubectl get secret --all-namespaces | _inline_fzf | awk '{print $1, $2}')
+    [ -z "$arg_pair" ] && return
+    local key=$(kubectl get secret -n ${arg_pair} \
+        -o go-template='{{- range $k,$v := .data -}}{{- printf "%s\n" $k -}}{{- end -}}' | _inline_fzf_nh)
+    [ -z "${key}" ] && return
+    kubectl get secret -n ${arg_pair} -o go-template='{{ index .data "'$key'" | base64decode }}'
+}
+
+# [ksecdn] decode all values of a secret in current namespace, usage: ksecdn [SECRET]
+function ksecdn() {
+    local secret="${1}"
+    if [ -z "${secret}" ]; then
+        secret=$(kubectl get secret | _inline_fzf | awk '{print $1}')
+    fi
+    [ -z "${secret}" ] && return
+    kubectl get secret "${secret}" \
+        -o go-template='{{- range $k, $v := .data -}}{{ $k }}: {{ $v | base64decode }}{{ "\n" }}{{- end }}'
+}
+
+# [ksecd] decode all values of a secret in cluster, usage: ksecd
+function ksecd() {
+    local arg_pair=$(kubectl get secret --all-namespaces | _inline_fzf | awk '{print $1, $2}')
+    [ -z "$arg_pair" ] && return
+    kubectl get secret -n ${arg_pair} \
+        -o go-template='{{- range $k, $v := .data -}}{{ $k }}: {{ $v | base64decode }}{{ "\n" }}{{- end }}'
 }
 
 # [kinstall] Install the required kubectl plugins
