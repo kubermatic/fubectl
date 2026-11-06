@@ -121,20 +121,24 @@ Usage:
 
 Examples:
 - `kfor 8000` - Forwards port 8000 to a pod
-- `kfor 8000:80` Fowards local port 8000 to a pod's port 80
+- `kfor 8000:80` Forwards local port 8000 to a pod's port 80
 
 Usage:
 ![kGif](./demo_src/kfor.gif)
 
 ---
 
-### `ksearch` – Search for string in resources
+### `kgrep` / `kgrepn` – Search for a string in resources all namespaces / current namespace
+
+Usage: `kgrep QUERY [KIND,...]`
 
 Examples:
-- `// TODO`
+- `kgrep nginx` - Search all resources for "nginx" across all namespaces
+- `kgrepn nginx` - Search all resources for "nginx" in the current namespace
+- `kgrep nginx deployment,configmap` - Restrict the search to deployments and configmaps
 
-Usage:
-![kGif](./demo_src/ksearch.gif)
+The resource kinds searched when no `[KIND,...]` is given can be customized
+via `FUBECTL_GREP_RESOURCES` environment variable (see [Customization](#customization)).
 
 ---
 
@@ -192,8 +196,10 @@ export PS1="\[$(kube_ctx_namespace)\] $PS1"
 
 `fubectl` can be customized via following environment variables
 
-* `FUBECTL_WATCH_CMD` – alterative `watch` command, e.g. [viddy](https://github.com/sachaos/viddy)
+* `FUBECTL_WATCH_CMD` – alalternativewatch` command, e.g. [viddy](https://github.com/sachaos/viddy)
 * `FUBECTL_NO_KCL` – disable `kcl` alias, since it may conflict with [KCL language CLI](https://www.kcl-lang.io/)
+* `FUBECTL_GREP_RESOURCES` – comma-separated list of resource kinds searched by `kgrep`/`kgrepn`.
+    Defaults to `deployment,daemonset,statefulset,replicaset,pod,endpointslices,service,configmap,secret,serviceaccount,ingress,networkpolicy,persistentvolumeclaim,job,cronjob`
 
 ## Troubleshooting
 
